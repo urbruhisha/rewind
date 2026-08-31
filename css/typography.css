@@ -1,0 +1,37 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+/* =========================
+   Typography
+========================= */
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+.brand-name,
+.nav-label,
+.sidebar-version {
+    font-family: "DM Mono", monospace;
+}
+
+.brand-name {
+    font-weight: 500;
+}
+
+.nav-label {
+    font-weight: 400;
+}
+
+.sidebar-version {
+    font-weight: 300;
+}

@@ -1,0 +1,3420 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>REWIND</title>
+        
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    
+<body class="reduce-motion">
+        
+        <div class="app">
+            
+            <aside class="sidebar">
+                
+                <!--Brand-->
+                <div class="sidebar-brand">
+                    <a href="#home-page" class="brand-link" aria-label="Go to REWIND home">
+                        <span class="brand-icon" aria-hidden="true">◉</span>
+                        
+                        <div class="brand-text">
+                            <span class="brand-name">REWIND</span>
+                            <span class="brand-tagline">Play it back.</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!--Main Navigation-->
+                <nav class="sidebar-nav" aria-label="Main navigation">
+                    <p class="nav-label">Your collection</p>
+                    
+                    <ul class="nav-list">
+                        <li>
+                            <button
+                                    class="nav-item active"
+                                    type="button"
+                                    data-page="home-page"
+                                    aria-current="page"
+                            >
+                                <span class="nav-icon" aria-hidden="true">⌂</span>
+                                <span>Home</span>
+                            </button>
+                        </li>
+                        
+                        <li>
+                            <button
+                                    class="nav-item"
+                                    type="button"
+                                    data-page="library-page"
+                            >
+                                <span class="nav-icon" aria-hidden="true">♫</span>
+                                <span>Music Library</span>
+                            </button>
+                        </li>
+                        
+                        <li>
+                            <button
+                                    class="nav-item"
+                                    type="button"
+                                    data-page="favorites-page"
+                            >
+                                <span class="nav-icon" aria-hidden="true">♡</span>
+                                <span>Favorites</span>
+                            </button>
+                        </li>
+                        
+                         <li>
+                            <button
+                                    class="nav-item"
+                                    type="button"
+                                    data-page="mixtapes-page"
+                            >
+                                <span class="nav-icon" aria-hidden="true">▣</span>
+                                <span>Mixtapes</span>
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <p class="nav-label">Manage</p>
+                    
+                    <ul class="nav-list">
+                        <li>
+                            <button
+                                class="nav-item"
+                                type="button"
+                                data-page="upload-page"
+                            >
+                                <span class="nav-icon" aria-hidden="true">＋</span>
+                                <span>Add to Collection</span>
+                            </button>
+                        </li>
+                        
+                        <li>
+                            <button
+                                class="nav-item"
+                                type="button"
+                                data-page="settings-page"
+                            >
+                                <span class="nav-icon" aria-hidden="true">⚙</span>
+                                <span>Settings</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!--Sidebar Footer-->
+                <div class="sidebar-footer">
+                    <p class="sidebar-status">READY to rewind.</p>
+                    <p class="sidebar-version">REWIND v1.0</p>
+                </div>
+             
+            </aside>
+            
+            <main class="main-content">
+
+    <!-- =========================
+         Home Page
+    ========================== -->
+    <section id="home-page" class="page-section">
+
+        <header class="home-header">
+
+            <div class="home-heading">
+                <p class="page-eyebrow">Now spinning</p>
+                <h1>Welcome back</h1>
+                <p>Press play on something familiar.</p>
+            </div>
+
+            <form class="search-bar" role="search">
+                <label
+                    class="visually-hidden"
+                    for="library-search"
+                >
+                    Search your music library
+                </label>
+
+                <span
+                    class="search-icon"
+                    aria-hidden="true"
+                >
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    id="library-search"
+                    name="search"
+                    placeholder="Search songs, artists, or mixtapes"
+                    autocomplete="off"
+                >
+            </form>
+
+        </header>
+
+<!-- =========================
+     Now Spinning
+========================== -->
+
+<section
+    class="now-spinning"
+    aria-labelledby="now-spinning-title"
+>
+
+    <!-- Left Speaker -->
+    <div
+        class="stereo-speaker"
+        aria-hidden="true"
+    >
+        <div class="speaker-holes"></div>
+    </div>
+
+
+    <!-- CD Chamber -->
+    <div class="cd-chamber">
+
+        <span
+            class="stereo-screw screw-top-left"
+            aria-hidden="true"
+        ></span>
+
+        <span
+            class="stereo-screw screw-top-right"
+            aria-hidden="true"
+        ></span>
+
+        <span
+            class="stereo-screw screw-bottom-left"
+            aria-hidden="true"
+        ></span>
+
+        <span
+            class="stereo-screw screw-bottom-right"
+            aria-hidden="true"
+        ></span>
+
+
+        <div class="cd-disc">
+
+            <img
+                id="now-spinning-cover"
+                src=""
+                alt=""
+            >
+
+            <div
+                class="cd-shine"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="cd-center"
+                aria-hidden="true"
+            >
+                <div class="cd-center-hole"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Track Information -->
+    <div class="stereo-display">
+
+        <div class="stereo-display-top">
+
+            <p class="now-spinning-number">
+                TRACK 01
+            </p>
+
+            <div class="now-spinning-status">
+                <span
+                    class="now-spinning-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span id="now-spinning-status">
+                    READY
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="now-spinning-track">
+
+            <h2 id="now-spinning-title">
+                Nothing Spinning
+            </h2>
+
+            <p
+                class="now-spinning-artist"
+                id="now-spinning-artist"
+            >
+                Choose something from your collection.
+            </p>
+
+            <p
+                class="now-spinning-genre"
+                id="now-spinning-genre"
+            >
+                REWIND
+            </p>
+
+        </div>
+
+
+        <div class="now-spinning-progress">
+
+            <span id="now-spinning-current-time">
+                0:00
+            </span>
+
+            <div class="now-spinning-progress-track">
+
+                <div
+                    class="now-spinning-progress-fill"
+                    id="now-spinning-progress-fill"
+                ></div>
+
+            </div>
+
+            <span id="now-spinning-duration">
+                0:00
+            </span>
+
+        </div>
+
+
+        <div class="now-spinning-footer">
+
+            <span>REWIND</span>
+
+            <span>SIDE A</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Audio Meter -->
+    <div class="stereo-meter">
+
+        <div
+            class="meter-bars"
+            aria-hidden="true"
+        >
+
+            <div class="meter-column meter-left">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="meter-column meter-right">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+
+        <div class="meter-labels">
+            <span>L</span>
+            <span>R</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- =========================
+          Recently Rewound
+    ========================== -->
+        <section
+            class="content-section"
+            aria-labelledby="recently-rewound-title"
+        >
+
+<div class="section-header">
+
+    <div>
+        <p class="section-eyebrow">
+            Your latest plays
+        </p>
+
+        <h2 id="recently-rewound-title">
+            Recently Rewound
+        </h2>
+    </div>
+
+</div>
+
+            <div
+                class="song-card-grid"
+                id="recently-rewound-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- All Tracks -->
+        <section
+            class="content-section"
+            aria-labelledby="home-library-title"
+        >
+
+<div class="section-header">
+
+    <div>
+        <p class="section-eyebrow">
+            Your collection
+        </p>
+
+        <h2 id="home-library-title">
+            All Tracks
+        </h2>
+    </div>
+
+    <button
+        class="section-link"
+        type="button"
+        data-page="library-page"
+    >
+        View all
+    </button>
+
+</div>
+
+            <div
+                class="song-card-grid"
+                id="library-grid"
+            ></div>
+
+        </section>
+
+    </section>
+
+
+    <!-- =========================
+         Music Library Page
+    ========================== -->
+<section
+    id="library-page"
+    class="page-section"
+>
+
+    <header class="page-header">
+
+        <div>
+            <p class="page-eyebrow">Your collection</p>
+
+            <h1 id="library-page-title">
+                Music Library
+            </h1>
+
+            <p>
+                Every track you’ve added to REWIND.
+            </p>
+<p
+    class="library-track-count"
+    id="library-track-count"
+>
+    0 tracks in your collection
+</p>
+        </div>
+
+    </header>
+
+<!-- =========================
+     Library Controls
+========================== -->
+
+<div class="library-toolbar">
+
+    <!-- Search -->
+    <div class="library-search">
+
+        <span
+            class="library-search-icon"
+            aria-hidden="true"
+        >
+            ⌕
+        </span>
+
+        <input
+            type="search"
+            id="library-page-search"
+            placeholder="Search your collection..."
+            autocomplete="off"
+            aria-label="Search music library"
+        >
+
+    </div>
+
+
+    <!-- Genre Filters -->
+    <div
+        class="library-filters"
+        role="group"
+        aria-label="Filter library by genre"
+    >
+
+        <button
+            class="library-filter active"
+            type="button"
+            data-genre="all"
+        >
+            All
+        </button>
+        
+        <button
+    class="library-filter"
+    type="button"
+    data-genre="Hip-Hop"
+>
+    Hip-Hop
+</button>
+
+<button
+    class="library-filter"
+    type="button"
+    data-genre="Rock"
+>
+    Rock
+</button>
+
+<button
+    class="library-filter"
+    type="button"
+    data-genre="Indie"
+>
+    Indie
+</button>
+
+        <button
+            class="library-filter"
+            type="button"
+            data-genre="R&B"
+        >
+            R&amp;B
+        </button>
+
+        <button
+            class="library-filter"
+            type="button"
+            data-genre="Pop"
+        >
+            Pop
+        </button>
+
+    </div>
+
+
+    <!-- Sort -->
+    <div class="library-sort">
+
+        <label
+            class="visually-hidden"
+            for="library-sort"
+        >
+            Sort library
+        </label>
+
+        <select id="library-sort">
+
+            <option value="recent">
+                Sort: Recent
+            </option>
+
+            <option value="title">
+                Sort: A–Z
+            </option>
+
+            <option value="artist">
+                Sort: Artist
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+
+    <section
+        class="content-section"
+        aria-labelledby="library-page-title"
+    >
+
+        <div
+            class="song-card-grid"
+            id="library-page-grid"
+        ></div>
+
+    </section>
+
+</section>
+
+ <!-- =========================
+     Favorites Page
+========================== -->
+
+<section
+    id="favorites-page"
+    class="page-section"
+>
+
+    <div class="favorites-layout">
+
+        <!-- =========================
+             Left Side
+        ========================== -->
+
+        <section class="favorites-left">
+
+            <header class="page-header">
+
+                <div>
+                    <p class="page-eyebrow">
+                        Saved for later
+                    </p>
+
+                    <h1 id="favorites-title">
+                        Favorites
+                    </h1>
+
+                    <p>
+                        Your most loved tracks, all in one place.
+                    </p>
+                </div>
+
+            </header>
+
+
+            <section 
+    class="content-section favorites-track-section" 
+    aria-labelledby="favorites-title"
+>
+
+    <div class="favorites-list-header">
+
+        <span>
+            Your Saved Tracks
+        </span>
+
+        <span id="favorites-count">
+            05 Tracks
+        </span>
+
+    </div>
+
+
+    <div 
+        class="song-card-grid" 
+        id="favorites-grid"
+    ></div>
+
+
+    <p 
+        class="empty-state" 
+        id="favorites-empty"
+    >
+        No favorites yet. Heart a song to save it here.
+    </p>
+
+</section>
+
+        </section>
+
+
+        <!-- =========================
+             Right Side
+        ========================== -->
+
+        <aside class="favorites-right">
+
+            <div class="favorites-vinyl-area">
+
+                <div class="favorites-vinyl">
+
+                    <div class="favorites-vinyl-center">
+
+                        <span class="favorites-vinyl-placeholder">
+                            REWIND
+                        </span>
+
+                        <img
+                            id="favorites-vinyl-cover"
+                            src=""
+                            alt=""
+                            hidden
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="favorites-now-playing">
+
+                    <p class="page-eyebrow">
+                        Now Playing
+                    </p>
+
+                    <h2 id="favorites-now-title">
+                        Nothing Spinning
+                    </h2>
+
+                    <p id="favorites-now-artist">
+                        Pick a track from your favorites.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+    <!-- =========================
+     Mixtapes Page
+========================== -->
+
+<section
+    id="mixtapes-page"
+    class="page-section"
+>
+
+    <header class="page-header">
+
+        <div>
+            <p class="page-eyebrow">Made by you</p>
+
+            <h1 id="mixtapes-page-title">
+                Mixtapes
+            </h1>
+
+            <p>
+                Build your own collections and keep your favorite moods together.
+            </p>
+        </div>
+
+        <button
+            class="create-mixtape-button"
+            type="button"
+        >
+            + Create Mixtape
+        </button>
+
+    </header>
+
+
+<!-- =========================
+     Recently Made
+========================== -->
+
+<section
+    class="content-section mixtape-section"
+    aria-labelledby="recent-mixtapes-title"
+>
+
+    <div class="section-header">
+
+    <h2 id="recent-mixtapes-title">
+        Recently Made
+    </h2>
+
+</div>
+
+
+    <div
+        class="mixtape-grid"
+        id="mixtape-grid"
+    ></div>
+
+
+    <div
+        class="empty-state mixtape-empty-state"
+        id="mixtape-empty"
+    >
+        <p>No mixtapes yet.</p>
+
+        <p>
+            Create your first one and start building your own tape.
+        </p>
+    </div>
+
+</section>
+
+
+    <!-- Mixtape Detail -->
+    <div
+        class="mixtape-detail"
+        id="mixtape-detail"
+        hidden
+    >
+
+        <button
+            class="mixtape-back-button"
+            type="button"
+        >
+            ← Back to Mixtapes
+        </button>
+
+        <div class="mixtape-detail-header">
+
+            <div>
+                <p class="page-eyebrow">Your tape</p>
+
+                <h2 id="mixtape-detail-title">
+                    Mixtape Name
+                </h2>
+
+                <p id="mixtape-detail-count">
+                    0 tracks
+                </p>
+            </div>
+            
+            <div class="mixtape-detail-actions">
+                
+            <button
+            class="delete-mixtape-button"
+            type="button"
+            >
+                Delete
+            </button>
+
+            <button
+            class="rename-mixtape-button"
+            type="button"
+            >
+                Rename
+            </button>
+
+            <button
+            class="add-tracks-button"
+            type="button"
+            >
+                + Add Tracks
+            </button>
+                
+
+            </div>
+
+        </div>
+
+        <div
+            class="song-card-grid"
+            id="mixtape-song-grid"
+        ></div>
+
+        <div
+            class="empty-state"
+            id="mixtape-detail-empty"
+        >
+            <p>This mixtape is empty.</p>
+            <p>Add some tracks from your library.</p>
+        </div>
+
+    </div>
+
+<!-- =========================
+     Heavy Rotation
+========================== -->
+
+<section
+    class="content-section mixtape-section"
+    id="heavy-rotation-section"
+    aria-labelledby="heavy-rotation-title"
+    hidden
+>
+
+    <div class="section-header">
+
+        <h2 id="heavy-rotation-title">
+            Heavy Rotation
+        </h2>
+
+    </div>
+
+    <div
+        class="mixtape-grid"
+        id="heavy-rotation-grid"
+    ></div>
+
+</section>
+              
+
+<!-- =========================
+     Browse by Mood
+========================== -->
+
+<section
+    class="content-section mixtape-section mood-section"
+    aria-labelledby="browse-mood-title"
+>
+
+    <div class="section-header">
+
+        <h2 id="browse-mood-title">
+            Browse by Mood
+        </h2>
+
+    </div>
+
+
+    <div class="mood-grid">
+
+        <button
+            class="mood-card mood-all active"
+            type="button"
+            data-mood="all"
+        >
+            <span class="mood-card-number">00</span>
+            <span class="mood-card-name">All Tapes</span>
+            <span class="mood-card-line"></span>
+        </button>
+
+
+        <button
+            class="mood-card mood-chill"
+            type="button"
+            data-mood="chill"
+        >
+            <span class="mood-card-number">01</span>
+            <span class="mood-card-name">Chill</span>
+            <span class="mood-card-line"></span>
+        </button>
+
+
+        <button
+            class="mood-card mood-late-night"
+            type="button"
+            data-mood="late-night"
+        >
+            <span class="mood-card-number">02</span>
+            <span class="mood-card-name">Late Night</span>
+            <span class="mood-card-line"></span>
+        </button>
+
+
+        <button
+            class="mood-card mood-study"
+            type="button"
+            data-mood="study"
+        >
+            <span class="mood-card-number">03</span>
+            <span class="mood-card-name">Study</span>
+            <span class="mood-card-line"></span>
+        </button>
+
+
+        <button
+            class="mood-card mood-romance"
+            type="button"
+            data-mood="romance"
+        >
+            <span class="mood-card-number">04</span>
+            <span class="mood-card-name">Romance</span>
+            <span class="mood-card-line"></span>
+        </button>
+
+
+        <button
+            class="mood-card mood-energy"
+            type="button"
+            data-mood="energy"
+        >
+            <span class="mood-card-number">05</span>
+            <span class="mood-card-name">Energy</span>
+            <span class="mood-card-line"></span>
+        </button>
+
+
+        <button
+            class="mood-card mood-nostalgia"
+            type="button"
+            data-mood="nostalgia"
+        >
+            <span class="mood-card-number">06</span>
+            <span class="mood-card-name">Nostalgia</span>
+            <span class="mood-card-line"></span>
+        </button>
+
+    </div>
+
+</section>
+
+</section>  
+
+                
+<!-- =========================
+     Upload Page
+========================== -->
+
+<section
+    id="upload-page"
+    class="page-section"
+>
+
+    <!-- Page Header -->
+    <header class="page-header">
+
+        <div>
+
+            <p class="page-eyebrow">
+                Add something new
+            </p>
+
+            <h1 id="upload-page-title">
+                Add to Collection
+            </h1>
+
+            <p>
+                Add a track to your REWIND library.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         Upload Layout
+    ========================== -->
+
+    <section
+        class="content-section upload-section"
+        aria-labelledby="upload-page-title"
+    >
+
+        <div class="upload-layout">
+
+
+            <!-- =========================
+                 LEFT — Track Form
+            ========================== -->
+
+            <form
+                class="upload-form"
+                id="upload-form"
+            >
+
+                <!-- Form Header -->
+                <div class="upload-panel-header">
+
+                    <div>
+
+                        <p class="upload-panel-eyebrow">
+                            Track Information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Song Title -->
+                <div class="form-group">
+
+                    <label for="song-title">
+                        Song Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="song-title"
+                        name="song-title"
+                        placeholder="Hold Me"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Artist -->
+                <div class="form-group">
+
+                    <label for="song-artist">
+                        Artist
+                    </label>
+
+                    <input
+                        type="text"
+                        id="song-artist"
+                        name="song-artist"
+                        placeholder="Hojean"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Genre -->
+                <div class="form-group">
+
+                    <label for="song-genre">
+                        Genre
+                    </label>
+
+                    <input
+                        type="text"
+                        id="song-genre"
+                        name="song-genre"
+                        placeholder="R&B"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+
+                <!-- =========================
+                     Cover Upload
+                ========================== -->
+
+                <div class="form-group upload-file-group">
+
+                    <label for="song-cover">
+                        Cover Art
+                    </label>
+
+
+                    <label
+                        class="upload-dropzone cover-dropzone"
+                        for="song-cover"
+                    >
+
+                        <span
+                            class="upload-dropzone-icon"
+                            aria-hidden="true"
+                        >
+                            ▧
+                        </span>
+
+
+                        <span class="upload-dropzone-content">
+
+                            <strong>
+                                Drop or Choose Cover Art
+                            </strong>
+
+                            <span id="cover-file-name">
+                                JPG / PNG • Square recommended
+                            </span>
+
+                        </span>
+
+                    </label>
+
+
+                    <input
+                        class="upload-file-input"
+                        type="file"
+                        id="song-cover"
+                        name="song-cover"
+                        accept="image/*"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- =========================
+                     Audio Upload
+                ========================== -->
+
+                <div class="form-group upload-file-group">
+
+                    <label for="song-audio">
+                        Audio File
+                    </label>
+
+
+                    <label
+                        class="upload-dropzone audio-dropzone"
+                        for="song-audio"
+                    >
+
+                        <span
+                            class="upload-dropzone-icon audio-icon"
+                            aria-hidden="true"
+                        >
+                            ♫
+                        </span>
+
+
+                        <span class="upload-dropzone-content">
+
+                            <strong>
+                                Choose Audio File
+                            </strong>
+
+                            <span id="audio-file-name">
+                                MP3 / WAV • Max 50MB
+                            </span>
+
+                        </span>
+
+                    </label>
+
+
+                    <input
+                        class="upload-file-input"
+                        type="file"
+                        id="song-audio"
+                        name="song-audio"
+                        accept="audio/*"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Form Buttons -->
+                <div class="upload-actions">
+
+                    <button
+                        class="upload-reset-button"
+                        type="reset"
+                    >
+                        Clear
+                    </button>
+
+
+                    <button
+                        class="upload-submit-button"
+                        type="submit"
+                    >
+
+                        <span
+                            class="upload-submit-icon"
+                            aria-hidden="true"
+                        >
+                            ⊕
+                        </span>
+
+                        <span>
+                            Add Track
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+
+
+
+            <!-- =========================
+                 RIGHT — Track Preview
+            ========================== -->
+
+            <aside class="upload-preview">
+
+
+                <!-- Preview Header -->
+                <div class="preview-header">
+
+                    <div>
+
+                        <p class="preview-heading">
+                            Track Preview
+                        </p>
+
+                        <p class="preview-recording-label">
+                            Side A • New Recording
+                        </p>
+
+                    </div>
+
+
+                    <span class="preview-record-number">
+                        REC_008
+                    </span>
+
+                </div>
+
+
+
+                <!-- =========================
+                     Preview Track Card
+                ========================== -->
+
+                <div class="preview-track-card">
+
+
+                    <!-- Cover -->
+                    <div class="preview-cover">
+
+                        <div
+                            class="preview-cover-placeholder"
+                            id="preview-cover-placeholder"
+                        >
+
+                            <span class="preview-cover-brand">
+                                REWIND
+                            </span>
+
+                            <span class="preview-cover-empty">
+                                NO COVER
+                            </span>
+
+                        </div>
+
+
+                        <img
+                            id="preview-cover-image"
+                            src=""
+                            alt=""
+                            hidden
+                        >
+
+                    </div>
+
+
+
+                    <!-- Track Details -->
+                    <div class="preview-track-details">
+
+
+                        <div class="preview-track-top">
+
+                            <div class="preview-track-text">
+
+                                <h2 id="preview-song-title">
+                                    Untitled Track
+                                </h2>
+
+                                <p
+                                    class="preview-song-artist"
+                                    id="preview-song-artist"
+                                >
+                                    Unknown Artist
+                                </p>
+
+<p class="preview-song-meta">
+
+    <span id="preview-song-genre">
+        REWIND
+    </span>
+
+    <span
+        class="preview-meta-divider"
+        id="preview-meta-divider"
+        hidden
+    >
+        ·
+    </span>
+
+    <span
+        id="preview-audio-duration"
+        hidden
+    >
+        --:--
+    </span>
+
+</p>
+
+                            </div>
+
+
+
+                            <div class="preview-track-actions">
+
+                                <span
+                                    class="preview-heart"
+                                    aria-hidden="true"
+                                >
+                                    ♡
+                                </span>
+
+                                <span
+                                    class="preview-more"
+                                    aria-hidden="true"
+                                >
+                                    •••
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Memory Quote -->
+                        <div class="preview-memory">
+
+                            <span
+                                class="preview-quote-mark"
+                                aria-hidden="true"
+                            >
+                                “
+                            </span>
+
+                            <p>
+                                Every track has a memory.
+                                <br>
+                                Make this one part of yours.
+                            </p>
+
+
+                            <!-- Decorative Cassette -->
+                            <div
+                                class="preview-mini-cassette"
+                                aria-hidden="true"
+                            >
+
+                                <span class="mini-cassette-reel reel-one">
+                                </span>
+
+                                <span class="mini-cassette-reel reel-two">
+                                </span>
+
+                                <span class="mini-cassette-line">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     Waveform
+                ========================== -->
+
+                <div class="preview-waveform">
+
+                    <span
+                        class="waveform-spark"
+                        aria-hidden="true"
+                    >
+                        ✦
+                    </span>
+
+
+                    <div
+                        class="waveform-bars"
+                        aria-hidden="true"
+                    >
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <span
+                        class="waveform-spark"
+                        aria-hidden="true"
+                    >
+                        ✦
+                    </span>
+
+                </div>
+
+
+
+                <!-- =========================
+                     Tips Box
+                ========================== -->
+
+                <div class="upload-tip-card">
+
+
+                    <div
+                        class="upload-tip-icon"
+                        aria-hidden="true"
+                    >
+
+                        <span class="tip-record">
+
+                            <span></span>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="upload-tip-text">
+
+                        <h3>
+                            Tips
+                        </h3>
+
+                        <p>
+                            Use high quality audio and a square cover art
+                            for the best experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</section>
+<!-- =========================
+     Settings Page
+========================== -->
+
+<section
+    id="settings-page"
+    class="page-section"
+>
+
+    <header class="page-header">
+
+        <div>
+            <p class="page-eyebrow">Tune your player</p>
+
+            <h1 id="settings-page-title">
+                Settings
+            </h1>
+
+            <p>
+                Adjust REWIND to fit the way you listen.
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- Playback -->
+    <section
+        class="settings-section"
+        aria-labelledby="playback-settings-title"
+    >
+
+        <div class="settings-section-header">
+            <p class="section-eyebrow">Listening</p>
+
+            <h2 id="playback-settings-title">
+                Playback
+            </h2>
+        </div>
+
+
+        <div class="settings-card">
+
+            <div class="setting-row">
+
+                <div class="setting-info">
+                    <h3>Default Volume</h3>
+
+                    <p>
+                        Choose the starting volume for REWIND.
+                    </p>
+                </div>
+
+                <div class="setting-control setting-volume">
+
+                    <input
+                        type="range"
+                        id="default-volume-setting"
+                        min="0"
+                        max="100"
+                        value="80"
+                        aria-label="Default volume"
+                    >
+
+                    <span id="default-volume-value">
+                        80%
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Appearance -->
+    <section
+        class="settings-section"
+        aria-labelledby="appearance-settings-title"
+    >
+
+        <div class="settings-section-header">
+            <p class="section-eyebrow">Visuals</p>
+
+            <h2 id="appearance-settings-title">
+                Appearance
+            </h2>
+        </div>
+
+
+        <div class="settings-card">
+
+<div class="setting-row theme-setting-row">
+
+    <div class="setting-info">
+        <h3>Theme</h3>
+
+        <p>
+            Choose how REWIND looks.
+        </p>
+    </div>
+
+    <div
+        class="theme-picker"
+        role="radiogroup"
+        aria-label="Choose REWIND theme"
+    >
+
+        <button
+            class="theme-option active"
+            type="button"
+            data-theme="rewind"
+            aria-pressed="true"
+        >
+            <span class="theme-preview theme-preview-rewind">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
+            <span class="theme-option-name">
+                REWIND
+            </span>
+        </button>
+
+
+        <button
+            class="theme-option"
+            type="button"
+            data-theme="matcha"
+            aria-pressed="false"
+        >
+            <span class="theme-preview theme-preview-matcha">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
+            <span class="theme-option-name">
+                PINK MATCHA
+            </span>
+        </button>
+
+
+        <button
+            class="theme-option"
+            type="button"
+            data-theme="cream"
+            aria-pressed="false"
+        >
+            <span class="theme-preview theme-preview-cream">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
+            <span class="theme-option-name">
+                CREAM
+            </span>
+        </button>
+
+    </div>
+
+</div>
+
+
+            <div class="setting-row">
+
+                <div class="setting-info">
+                    <h3>Reduce Animations</h3>
+
+                    <p>
+                        Use fewer motion effects throughout the app.
+                    </p>
+                </div>
+
+                <label class="toggle-control">
+
+                    <input
+                        type="checkbox"
+                        id="reduce-motion-setting"
+                    >
+
+                    <span class="toggle-track">
+                        <span class="toggle-thumb"></span>
+                    </span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Collection Stats -->
+    <section
+        class="settings-section"
+        aria-labelledby="collection-settings-title"
+    >
+
+        <div class="settings-section-header">
+            <p class="section-eyebrow">At a glance</p>
+
+            <h2 id="collection-settings-title">
+                Your Collection
+            </h2>
+        </div>
+
+
+        <div class="collection-stats">
+
+            <div class="stat-card">
+                <span
+                    class="stat-number"
+                    id="settings-track-count"
+                >
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Tracks
+                </span>
+            </div>
+
+
+            <div class="stat-card">
+                <span
+                    class="stat-number"
+                    id="settings-favorite-count"
+                >
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Favorites
+                </span>
+            </div>
+
+
+            <div class="stat-card">
+                <span
+                    class="stat-number"
+                    id="settings-mixtape-count"
+                >
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Mixtapes
+                </span>
+            </div>
+
+
+            <div class="stat-card">
+                <span
+                    class="stat-number"
+                    id="settings-upload-count"
+                >
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Uploaded
+                </span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Storage -->
+    <section
+        class="settings-section"
+        aria-labelledby="storage-settings-title"
+    >
+
+        <div class="settings-section-header">
+            <p class="section-eyebrow">Browser storage</p>
+
+            <h2 id="storage-settings-title">
+                Storage
+            </h2>
+        </div>
+
+
+        <div class="settings-card">
+
+            <div class="setting-row storage-row">
+
+                <div class="setting-info">
+                    <h3>Uploaded Music</h3>
+
+                    <p>
+                        Your uploaded tracks are stored locally in this browser.
+                    </p>
+                </div>
+
+                <button
+                    class="clear-uploaded-music-button"
+                    type="button"
+                >
+                    Clear Uploaded Music
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section
+        class="settings-section"
+        aria-labelledby="about-rewind-title"
+    >
+
+        <div class="settings-section-header">
+            <p class="section-eyebrow">About</p>
+
+            <h2 id="about-rewind-title">
+                REWIND
+            </h2>
+        </div>
+
+
+        <div class="settings-card about-rewind">
+
+            <div>
+                <p class="about-tagline">
+                    Play it back.
+                </p>
+
+                <p>
+                    A retro-inspired personal music library
+                    built for the songs you keep coming back to.
+                </p>
+            </div>
+
+            <div class="about-meta">
+                <span>Version 1.0</span>
+                <span>Designed &amp; developed by Isha</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+</main>
+        
+        </div>
+
+        <footer class="music-player">
+
+    <!-- Current Song -->
+    <div class="player-song">
+
+        <div class="player-cover">
+            <img
+                src="assets/covers/hold-me-hojean.jpg"
+                alt="Hold Me by Hojean"
+            >
+        </div>
+
+        <div class="player-song-info">
+            <p class="player-song-title">Hold Me</p>
+            <p class="player-song-artist">Hojean</p>
+        </div>
+
+        <button
+            class="player-favorite"
+            type="button"
+            aria-label="Add Hold Me to favorites"
+        >
+            ♡
+        </button>
+
+    </div>
+
+
+    <!-- Main Controls -->
+    <div class="player-controls">
+
+        <div class="player-buttons">
+
+            <button
+                class="player-shuffle"
+                type="button"
+                aria-label="Shuffle"
+                aria-pressed="false"
+            >
+                ⤨
+            </button>
+
+            <button
+                class="player-previous"
+                type="button"
+                aria-label="Previous song"
+            >
+                ◀
+            </button>
+
+            <button
+                class="player-toggle"
+                type="button"
+                aria-label="Play Hold Me"
+            >
+                ▶
+            </button>
+
+            <button
+                class="player-next"
+                type="button"
+                aria-label="Next song"
+            >
+                ▶
+            </button>
+
+            <button
+                class="player-repeat"
+                type="button"
+                aria-label="Repeat"
+                aria-pressed="false"
+            >
+                ↻
+            </button>
+
+        </div>
+
+
+        <!-- Progress -->
+        <div class="player-progress">
+
+            <span class="player-current-time">
+                0:00
+            </span>
+
+            <input
+                class="player-progress-bar"
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                aria-label="Song progress"
+            >
+
+            <span class="player-duration">
+                2:42
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Volume -->
+    <div class="player-volume">
+
+        <span aria-hidden="true">♪</span>
+
+        <input
+            class="volume-slider"
+            type="range"
+            min="0"
+            max="100"
+            value="80"
+            aria-label="Volume"
+        >
+
+    </div>
+
+</footer>
+
+<!-- =========================
+     Create Mixtape Modal
+========================== -->
+
+<div
+    class="modal-overlay"
+    id="mixtape-modal"
+    hidden
+>
+
+    <div
+        class="modal mixtape-customizer-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="mixtape-modal-title"
+    >
+
+        <div class="modal-header">
+
+            <div>
+                <p class="page-eyebrow">
+                    New tape
+                </p>
+
+                <h2 id="mixtape-modal-title">
+                    CREATE MIXTAPE
+                </h2>
+
+                <p class="mixtape-customizer-subtitle">
+                    Build your tape and make it yours.
+                </p>
+            </div>
+
+
+            <button
+                class="modal-close"
+                type="button"
+                aria-label="Close create mixtape form"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="mixtape-form">
+
+            <div class="mixtape-customizer-layout">
+
+
+                <!-- =========================
+                     Left: Controls
+                ========================== -->
+
+                <div class="mixtape-customizer-controls">
+
+
+                    <!-- Name -->
+
+                    <div class="form-group">
+
+                        <label for="mixtape-name">
+                            Mixtape Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="mixtape-name"
+                            name="mixtape-name"
+                            placeholder="Late Night Drive"
+                            maxlength="40"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Mood -->
+
+                    <div class="form-group">
+
+                        <label for="mixtape-mood">
+                            Mood
+                        </label>
+
+                        <select
+                            id="mixtape-mood"
+                            name="mixtape-mood"
+                        >
+
+                            <option value="">
+                                No mood
+                            </option>
+
+                            <option value="chill">
+                                Chill
+                            </option>
+
+                            <option value="late-night">
+                                Late Night
+                            </option>
+
+                            <option value="study">
+                                Study
+                            </option>
+
+                            <option value="romance">
+                                Romance
+                            </option>
+
+                            <option value="energy">
+                                Energy
+                            </option>
+
+                            <option value="nostalgia">
+                                Nostalgia
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="mixtape-customizer-divider"></div>
+
+
+                    <p class="mixtape-customizer-label">
+                        Customize Your Tape
+                    </p>
+
+
+                    <!-- Shell -->
+
+                    <fieldset class="mixtape-option-group">
+
+                        <legend>
+                            Shell
+                        </legend>
+
+                        <div class="mixtape-swatch-row">
+
+                            <label class="mixtape-swatch-option">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-shell"
+                                    value="charcoal"
+                                    checked
+                                >
+
+                                <span
+                                    class="cassette-swatch shell-charcoal"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span class="visually-hidden">
+                                    Charcoal
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-swatch-option">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-shell"
+                                    value="cream"
+                                >
+
+                                <span
+                                    class="cassette-swatch shell-cream"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span class="visually-hidden">
+                                    Cream
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-swatch-option">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-shell"
+                                    value="blue"
+                                >
+
+                                <span
+                                    class="cassette-swatch shell-blue"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span class="visually-hidden">
+                                    Blue Gray
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-swatch-option">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-shell"
+                                    value="brown"
+                                >
+
+                                <span
+                                    class="cassette-swatch shell-brown"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span class="visually-hidden">
+                                    Brown
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-swatch-option">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-shell"
+                                    value="red"
+                                >
+
+                                <span
+                                    class="cassette-swatch shell-red"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span class="visually-hidden">
+                                    Muted Red
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- Label -->
+
+                    <fieldset class="mixtape-option-group">
+
+                        <legend>
+                            Label
+                        </legend>
+
+                        <div class="mixtape-choice-row">
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-label"
+                                    value="cream"
+                                    checked
+                                >
+
+                                <span>
+                                    Cream
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-label"
+                                    value="white"
+                                >
+
+                                <span>
+                                    White
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-label"
+                                    value="kraft"
+                                >
+
+                                <span>
+                                    Kraft
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-label"
+                                    value="faded"
+                                >
+
+                                <span>
+                                    Faded
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- Accent -->
+
+                    <fieldset class="mixtape-option-group">
+
+                        <legend>
+                            Accent
+                        </legend>
+
+                        <div class="mixtape-swatch-row">
+
+                            <label class="mixtape-swatch-option">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-accent"
+                                    value="blue"
+                                    checked
+                                >
+
+                                <span
+                                    class="cassette-swatch accent-blue"
+                                    aria-hidden="true"
+                                ></span>
+
+                            </label>
+
+
+                            <label class="mixtape-swatch-option">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-accent"
+                                    value="sage"
+                                >
+
+                                <span
+                                    class="cassette-swatch accent-sage"
+                                    aria-hidden="true"
+                                ></span>
+
+                            </label>
+
+
+                            <label class="mixtape-swatch-option">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-accent"
+                                    value="rose"
+                                >
+
+                                <span
+                                    class="cassette-swatch accent-rose"
+                                    aria-hidden="true"
+                                ></span>
+
+                            </label>
+
+
+                            <label class="mixtape-swatch-option">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-accent"
+                                    value="amber"
+                                >
+
+                                <span
+                                    class="cassette-swatch accent-amber"
+                                    aria-hidden="true"
+                                ></span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- Tape Type -->
+
+                    <fieldset class="mixtape-option-group">
+
+                        <legend>
+                            Tape Type
+                        </legend>
+
+                        <div class="mixtape-choice-row">
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-type"
+                                    value="I"
+                                    checked
+                                >
+
+                                <span>
+                                    TYPE I
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-type"
+                                    value="II"
+                                >
+
+                                <span>
+                                    TYPE II
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-type"
+                                    value="IV"
+                                >
+
+                                <span>
+                                    TYPE IV
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- Sticker -->
+
+                    <fieldset class="mixtape-option-group">
+
+                        <legend>
+                            Sticker
+                        </legend>
+
+                        <div class="mixtape-choice-row sticker-options">
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-sticker"
+                                    value="none"
+                                    checked
+                                >
+
+                                <span>
+                                    None
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-sticker"
+                                    value="heart"
+                                >
+
+                                <span aria-hidden="true">
+                                    ♡
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-sticker"
+                                    value="star"
+                                >
+
+                                <span aria-hidden="true">
+                                    ★
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-sticker"
+                                    value="moon"
+                                >
+
+                                <span aria-hidden="true">
+                                    ☾
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-sticker"
+                                    value="flower"
+                                >
+
+                                <span aria-hidden="true">
+                                    ✿
+                                </span>
+
+                            </label>
+
+
+                            <label class="mixtape-choice">
+
+                                <input
+                                    type="radio"
+                                    name="cassette-sticker"
+                                    value="bolt"
+                                >
+
+                                <span aria-hidden="true">
+                                    ⚡
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+                </div>
+
+
+                <!-- =========================
+                     Right: Live Preview
+                ========================== -->
+
+                <aside class="mixtape-customizer-preview">
+
+                    <div class="mixtape-preview-header">
+
+                        <div>
+                            <p class="page-eyebrow">
+                                Live Preview
+                            </p>
+
+                            <p class="mixtape-preview-note">
+                                Your cassette updates as you customize it.
+                            </p>
+                        </div>
+
+                        <span>
+                            REC_001
+                        </span>
+
+                    </div>
+
+
+                    <div class="mixtape-preview-stage">
+
+                        <div
+                            class="cassette mixtape-preview-cassette"
+                            id="mixtape-preview-cassette"
+                        >
+
+                            <div class="cassette-top">
+
+                                <span class="cassette-side">
+                                    A
+                                </span>
+
+                                <span class="cassette-brand">
+                                    REWIND
+                                </span>
+
+                            </div>
+
+
+                            <div class="cassette-label">
+
+                                <p
+                                    class="cassette-title"
+                                    id="mixtape-preview-title"
+                                >
+                                    UNTITLED TAPE
+                                </p>
+
+                                <span class="cassette-line"></span>
+
+                                <span
+                                    class="mixtape-preview-sticker"
+                                    id="mixtape-preview-sticker"
+                                    hidden
+                                ></span>
+
+                            </div>
+
+
+                            <div class="cassette-window">
+
+                                <span
+                                    class="cassette-reel reel-left"
+                                ></span>
+
+                                <div class="cassette-tape-line"></div>
+
+                                <span
+                                    class="cassette-reel reel-right"
+                                ></span>
+
+                            </div>
+
+
+                            <div class="cassette-bottom">
+
+                                <span class="cassette-screw"></span>
+
+                                <span
+                                    class="cassette-center-mark"
+                                    id="mixtape-preview-type"
+                                >
+                                    TYPE I • NORMAL POSITION • 60
+                                </span>
+
+                                <span class="cassette-screw"></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mixtape-preview-meta">
+
+                        <span>
+                            SIDE A
+                        </span>
+
+                        <span id="mixtape-preview-mood">
+                            NO MOOD
+                        </span>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+
+            <!-- Actions -->
+
+            <div class="modal-actions mixtape-customizer-actions">
+
+                <button
+                    class="modal-cancel"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="modal-submit"
+                    type="submit"
+                >
+                    + Create Mixtape
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     Add Tracks Modal
+========================== -->
+
+<div
+    class="modal-overlay"
+    id="add-tracks-modal"
+    hidden
+>
+    <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="add-tracks-title"
+    >
+
+        <div class="modal-header">
+
+            <div>
+                <p class="page-eyebrow">
+                    Build your tape
+                </p>
+
+                <h2 id="add-tracks-title">
+                    ADD TRACKS
+                </h2>
+            </div>
+
+
+            <button
+                class="add-tracks-close"
+                type="button"
+                aria-label="Close add tracks"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="track-picker-search">
+
+            <span
+                class="search-icon"
+                aria-hidden="true"
+            >
+                ⌕
+            </span>
+
+            <input
+                type="search"
+                id="track-picker-search"
+                placeholder="Search songs or artists"
+                autocomplete="off"
+                aria-label="Search tracks"
+            >
+
+        </div>
+
+
+        <div
+            class="track-picker"
+            id="track-picker"
+        ></div>
+
+
+        <div class="modal-actions">
+
+            <button
+                class="add-tracks-cancel"
+                type="button"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="add-selected-tracks"
+                type="button"
+            >
+                Add Selected
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- =========================
+     Rename Mixtape Modal
+========================== -->
+
+<div
+    class="modal-overlay"
+    id="rename-mixtape-modal"
+    hidden
+>
+    <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="rename-mixtape-title"
+    >
+
+        <div class="modal-header">
+
+            <div>
+
+                <p class="page-eyebrow">
+                    Edit tape
+                </p>
+
+                <h2 id="rename-mixtape-title">
+                    RENAME MIXTAPE
+                </h2>
+
+            </div>
+
+
+            <button
+                class="rename-mixtape-close"
+                type="button"
+                aria-label="Close rename mixtape"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="rename-mixtape-form">
+
+            <div class="form-group">
+
+                <label for="rename-mixtape-name">
+                    Mixtape name
+                </label>
+
+                <input
+                    type="text"
+                    id="rename-mixtape-name"
+                    maxlength="40"
+                    required
+                >
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    class="rename-mixtape-cancel"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="modal-submit"
+                    type="submit"
+                >
+                    Save Name
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+
+
+<!-- =========================
+     Delete Mixtape Modal
+========================== -->
+
+<div
+    class="modal-overlay"
+    id="delete-mixtape-modal"
+    hidden
+>
+    <div
+        class="modal delete-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="delete-mixtape-title"
+    >
+
+        <div class="modal-header">
+
+            <div>
+
+                <p class="page-eyebrow">
+                    Remove tape
+                </p>
+
+                <h2 id="delete-mixtape-title">
+                    DELETE MIXTAPE
+                </h2>
+
+            </div>
+
+
+            <button
+                class="delete-mixtape-close"
+                type="button"
+                aria-label="Close delete confirmation"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="delete-modal-message">
+
+            <p>
+                Are you sure you want to delete
+                <strong id="delete-mixtape-name">
+                    this mixtape
+                </strong>?
+            </p>
+
+            <p class="delete-warning">
+                This can't be undone.
+            </p>
+
+        </div>
+
+
+        <div class="modal-actions">
+
+            <button
+                class="delete-mixtape-cancel"
+                type="button"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="confirm-delete-mixtape"
+                type="button"
+            >
+                Delete Mixtape
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- =========================
+     Edit Track Modal
+========================== -->
+
+<div
+    class="modal-overlay"
+    id="edit-track-modal"
+    hidden
+>
+    <div
+        class="modal edit-track-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="edit-track-title"
+    >
+
+        <div class="modal-header">
+
+            <div>
+                <p class="page-eyebrow">
+                    Fix something up
+                </p>
+
+                <h2 id="edit-track-title">
+                    EDIT TRACK
+                </h2>
+            </div>
+
+            <button
+                class="edit-track-close"
+                type="button"
+                aria-label="Close edit track"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="edit-track-form">
+
+            <div class="form-group">
+
+                <label for="edit-song-title">
+                    Song title
+                </label>
+
+                <input
+                    type="text"
+                    id="edit-song-title"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="edit-song-artist">
+                    Artist
+                </label>
+
+                <input
+                    type="text"
+                    id="edit-song-artist"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="edit-song-genre">
+                    Genre
+                </label>
+
+                <input
+                    type="text"
+                    id="edit-song-genre"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="edit-song-cover">
+                    Replace cover
+                </label>
+
+                <input
+                    type="file"
+                    id="edit-song-cover"
+                    accept="image/*"
+                >
+
+                <p class="edit-file-note">
+                    Leave empty to keep the current cover.
+                </p>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="edit-song-audio">
+                    Replace audio
+                </label>
+
+                <input
+                    type="file"
+                    id="edit-song-audio"
+                    accept="audio/*"
+                >
+
+                <p class="edit-file-note">
+                    Leave empty to keep the current audio.
+                </p>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    class="edit-track-cancel"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="modal-submit"
+                    type="submit"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<!-- =========================
+     Delete Track Modal
+========================== -->
+
+<div
+    class="modal-overlay"
+    id="delete-track-modal"
+    hidden
+>
+    <div
+        class="modal delete-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="delete-track-title"
+    >
+
+        <div class="modal-header">
+
+            <div>
+                <p class="page-eyebrow">
+                    Remove track
+                </p>
+
+                <h2 id="delete-track-title">
+                    DELETE TRACK
+                </h2>
+            </div>
+
+            <button
+                class="delete-track-close"
+                type="button"
+                aria-label="Close delete track confirmation"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="delete-modal-message">
+
+            <p>
+                Are you sure you want to delete
+                <strong id="delete-track-name">
+                    this track
+                </strong>?
+            </p>
+
+            <p class="delete-warning">
+                This will remove it from your REWIND collection.
+            </p>
+
+        </div>
+
+
+        <div class="modal-actions">
+
+            <button
+                class="delete-track-cancel"
+                type="button"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="confirm-delete-track"
+                type="button"
+            >
+                Delete Track
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- =========================
+     Duplicate Track Modal
+========================== -->
+
+<div
+    class="modal-overlay"
+    id="duplicate-track-modal"
+    hidden
+>
+    <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="duplicate-track-title"
+    >
+
+        <div class="modal-header">
+
+            <div>
+                <p class="page-eyebrow">
+                    Already rewound
+                </p>
+
+                <h2 id="duplicate-track-title">
+                    TRACK ALREADY EXISTS
+                </h2>
+            </div>
+
+            <button
+                class="duplicate-track-close"
+                type="button"
+                aria-label="Close duplicate track warning"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <div class="duplicate-track-message">
+
+            <p>
+                <strong id="duplicate-track-name">
+                    This track
+                </strong>
+                is already in your collection.
+            </p>
+
+            <p class="duplicate-track-note">
+                No need to add another copy.
+            </p>
+
+        </div>
+
+        <div class="modal-actions">
+
+            <button
+                class="duplicate-track-ok"
+                type="button"
+            >
+                Got it
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- =========================
+     Toast Notification
+========================== -->
+
+<div
+    class="toast"
+    id="rewind-toast"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+    hidden
+>
+    <span
+        class="toast-icon"
+        aria-hidden="true"
+    >
+        ✓
+    </span>
+
+    <div class="toast-content">
+
+        <p
+            class="toast-title"
+            id="toast-title"
+        >
+            TRACK ADDED TO REWIND
+        </p>
+
+        <p
+            class="toast-message"
+            id="toast-message"
+        ></p>
+
+    </div>
+</div>
+
+<!-- =========================
+     Clear Uploaded Music Modal
+========================== -->
+
+<div
+    class="modal-overlay"
+    id="clear-uploads-modal"
+    hidden
+>
+    <div
+        class="modal delete-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="clear-uploads-title"
+    >
+
+        <div class="modal-header">
+
+            <div>
+                <p class="page-eyebrow">
+                    Storage cleanup
+                </p>
+
+                <h2 id="clear-uploads-title">
+                    CLEAR UPLOADED MUSIC?
+                </h2>
+            </div>
+
+            <button
+                class="clear-uploads-close"
+                type="button"
+                aria-label="Close clear uploaded music confirmation"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <div class="delete-modal-message">
+
+            <p>
+                This will permanently remove every track
+                you added through REWIND.
+            </p>
+
+            <p class="delete-warning">
+                Your built-in tracks will stay.
+                This can't be undone.
+            </p>
+
+        </div>
+
+        <div class="modal-actions">
+
+            <button
+                class="clear-uploads-cancel"
+                type="button"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="confirm-clear-uploads"
+                type="button"
+            >
+                Clear Uploaded Music
+            </button>
+
+        </div>
+
+    </div>
+</div>
+        
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/favorites.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/player.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/mixtapes.js"></script>
+<script src="js/upload.js"></script>
+<script src="js/settings.js"></script>
+
+    </body>
+</html>

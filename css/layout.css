@@ -1,0 +1,48 @@
+
+/* =========================
+   Base Layout
+========================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+
+    overflow: hidden;
+}
+
+.app {
+    display: flex;
+
+    width: 100%;
+    height: calc(100vh - var(--player-height));
+}
+
+.main-content {
+    flex: 1;
+
+    min-width: 0;
+    padding: var(--space-xl);
+
+    background-color: var(--color-background);
+
+    overflow-y: auto;
+}
+.main-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+}
+
+.main-content::-webkit-scrollbar {
+    display: none;
+}

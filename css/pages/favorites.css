@@ -1,0 +1,490 @@
+/* =========================
+   Favorites Page
+========================= */
+
+#favorites-page .page-header {
+    text-align: left;  
+
+    margin-top: var(--space-xl);
+    margin-bottom: 1rem;
+}
+
+#favorites-page .page-header h1 {
+    font-family: "DM Mono", monospace;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 5px;
+
+    color: var(--color-text-primary);
+}
+
+#favorites-page .page-header > div > p:last-child {
+    color: var(--color-text-secondary);
+}
+
+/* =========================
+   Favorites Split Layout
+========================= */
+
+.favorites-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(320px, 0.85fr);
+
+    gap: 2rem;
+
+    min-height: calc(100vh - 180px);
+
+    overflow: visible;
+    
+    align-items: start;
+}
+
+/* =========================
+   Favorites Left Side
+========================= */
+
+.favorites-left {
+    min-width: 0;
+    max-width: 820px;
+}
+.favorites-track-section {
+    margin-top: 1rem;
+}
+
+
+/* =========================
+   Favorites Right Side
+========================= */
+
+.favorites-right {
+    position: sticky;
+
+    top: 0;
+
+    align-self: start;
+
+    min-width: 0;
+
+    height: calc(100vh - 80px);
+
+    overflow: visible;
+}
+.favorites-vinyl-area {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 560px;
+}
+
+/* =========================
+   Favorites Vinyl
+========================= */
+
+.favorites-vinyl {
+    position: absolute;
+
+    top: 50%;
+    right: -200px;
+
+    width: 680px;
+    height: 680px;
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.025) 0 1px,
+            rgba(0, 0, 0, 0.05) 1px 4px
+        ),
+        radial-gradient(
+            circle,
+            #151b1c 0%,
+            #151b1c 9%,
+            #242c2d 9.5%,
+            #101516 11%,
+            #1b2223 12%,
+            #090d0e 100%
+        );
+
+    border: 1px solid rgba(226, 228, 210, 0.08);
+
+    box-shadow:
+        inset 0 0 40px rgba(255, 255, 255, 0.025),
+        inset 0 0 80px rgba(0, 0, 0, 0.35),
+        -18px 20px 35px rgba(0, 0, 0, 0.28);
+}
+
+/* =========================
+   Vinyl Extra Detail
+========================= */
+
+.favorites-vinyl::before {
+    content: "";
+
+    position: absolute;
+    inset: 7%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            transparent 0 18%,
+            rgba(255,255,255,0.035) 18.2% 18.5%,
+            transparent 18.7% 32%,
+            rgba(255,255,255,0.025) 32.2% 32.5%,
+            transparent 32.7% 46%,
+            rgba(255,255,255,0.02) 46.2% 46.5%,
+            transparent 46.7% 100%
+        );
+
+    pointer-events: none;
+}
+
+.favorites-vinyl::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 28%,
+            rgba(255,255,255,0.035) 42%,
+            rgba(255,255,255,0.015) 48%,
+            transparent 58%
+        );
+
+    pointer-events: none;
+}
+/* =========================
+   Vinyl Center
+========================= */
+
+.favorites-vinyl-center {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 180px;
+    height: 180px;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            var(--color-accent) 0 5%,
+            var(--color-cream) 5.5% 100%
+        );
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.18),
+        0 0 0 6px rgba(226, 228, 210, 0.06);
+}
+
+.favorites-vinyl-placeholder {
+    color: var(--color-charcoal);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+}
+
+#favorites-vinyl-cover {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.favorites-vinyl-placeholder::after {
+    content: "33⅓ RPM";
+
+    display: block;
+
+    margin-top: 0.45rem;
+
+    font-size: 0.45rem;
+    letter-spacing: 0.12em;
+
+    opacity: 0.55;
+}
+/* =========================
+   Favorites Now Playing
+========================= */
+
+ .favorites-now-playing {
+    position: absolute;
+
+    right: 300px;
+    bottom: 3.5rem;
+    left: auto;
+
+    z-index: 3;
+
+    width: 220px;
+}
+
+.favorites-now-playing h2 {
+    margin: 0.4rem 0 0;
+
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.favorites-now-playing > p:last-child {
+    margin-top: 0.35rem;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.95rem;
+}
+
+/* =========================
+   Favorite Track List
+========================= */
+
+#favorites-grid {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.55rem;
+}
+
+.favorite-track-row {
+    display: grid;
+
+    grid-template-columns:
+        42px
+        minmax(0, 1fr);
+
+    align-items: center;
+    gap: 0.7rem;
+
+    padding: 0;
+
+    background: none;
+    border: none;
+}
+.favorite-track-row:hover {
+    border-color: var(--color-accent);
+
+    transform: translateX(3px);
+}
+
+.favorite-track-number {
+    align-self: center;
+
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: 1.35rem;
+    font-weight: 500;
+
+    letter-spacing: 0.04em;
+
+    text-align: right;
+}
+
+.favorite-track-cover {
+    width: 48px;
+    height: 48px;
+
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+.favorite-track-info {
+    min-width: 0;
+}
+
+.favorite-track-info h3 {
+    margin: 0;
+
+    overflow: hidden;
+
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.82rem;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.favorite-track-info p {
+    margin-top: 0.2rem;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.72rem;
+}
+
+
+.favorite-track-genre {
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.favorite-track-row .favorite-button,
+.favorite-track-row .favorite-track-play {
+    position: static;
+
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    color: var(--color-text-secondary);
+    background: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 50%;
+
+    opacity: 1;
+    visibility: visible;
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+.favorite-track-play {
+    color: var(--color-accent);
+}
+
+.favorite-track-play:hover {
+    color: var(--color-charcoal);
+    background-color: var(--color-accent);
+
+    border-color: var(--color-accent);
+}
+
+.favorite-track-row .favorite-button {
+    color: #d88c8c;
+}
+
+.favorite-track-row .favorite-button:hover,
+.favorite-track-play:hover {
+    color: var(--color-accent);
+
+    border-color: var(--color-border);
+}
+
+.favorite-track-panel {
+    display: grid;
+
+    grid-template-columns:
+        48px
+        minmax(0, 1fr)
+        auto
+        32px
+        32px;
+
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: 0.55rem 0.75rem;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    transition:
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.favorite-track-row:hover .favorite-track-panel {
+    border-color: var(--color-accent);
+    transform: translateX(3px);
+}
+
+.favorites-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 0.65rem;
+    padding-left: 3.2rem;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.65rem;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+#favorites-count {
+    color: var(--color-accent);
+}
+
+@keyframes favoritesVinylSpin {
+    from {
+        transform:
+            translateY(-50%)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(-50%)
+            rotate(360deg);
+    }
+}
+
+.favorites-vinyl.is-playing {
+    animation:
+        favoritesVinylSpin
+        8s linear infinite;
+}
+
+.favorites-vinyl:not(.is-playing) {
+    animation-play-state: paused;
+}

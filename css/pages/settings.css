@@ -1,0 +1,456 @@
+/* =========================
+   Settings Page
+========================= */
+
+#settings-page .page-header {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+#settings-page .page-header h1 {
+    font-family: "DM Mono", monospace;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 5px;
+
+    color: var(--color-text-primary);
+}
+
+#settings-page .page-header > div > p:last-child {
+    color: var(--color-text-secondary);
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+.settings-section {
+    margin-bottom: 2.5rem;
+}
+
+.settings-section-header {
+    margin-bottom: var(--space-md);
+}
+
+.settings-section-header h2 {
+    margin-top: 0.25rem;
+
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+
+/* =========================
+   Settings Card
+========================= */
+
+.settings-card {
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    overflow: hidden;
+}
+
+.setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+
+    padding: 1.1rem 1.2rem;
+}
+
+.setting-row + .setting-row {
+    border-top: 1px solid var(--color-border);
+}
+
+.setting-info h3 {
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.85rem;
+}
+
+.setting-info p {
+    margin-top: 0.25rem;
+
+    color: var(--color-text-secondary);
+    font-size: 0.78rem;
+}
+
+.setting-value {
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.75rem;
+}
+
+
+/* =========================
+   Settings Volume Slider
+========================= */
+
+.setting-volume {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+
+    width: min(280px, 40%);
+}
+
+#default-volume-setting {
+    width: 100%;
+    height: 4px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: linear-gradient(
+        to right,
+        var(--color-accent) 0%,
+        var(--color-accent) var(--fill, 80%),
+        var(--color-surface-light) var(--fill, 80%),
+        var(--color-surface-light) 100%
+    );
+
+    border-radius: 999px;
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* Thumb */
+
+#default-volume-setting::-webkit-slider-thumb {
+    width: 12px;
+    height: 12px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-color: var(--color-cream);
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+#default-volume-setting::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+
+    background-color: var(--color-cream);
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   Toggle
+========================= */
+
+.toggle-control {
+    cursor: pointer;
+}
+
+.toggle-control input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.toggle-track {
+    display: block;
+
+    width: 44px;
+    height: 24px;
+
+    padding: 3px;
+
+    background-color: var(--color-background);
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.toggle-thumb {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: var(--color-text-secondary);
+
+    border-radius: 50%;
+
+    transition:
+        transform var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+.toggle-control input:checked + .toggle-track {
+    background-color: rgba(123, 167, 175, 0.16);
+    border-color: var(--color-accent);
+}
+
+.toggle-control input:checked + .toggle-track .toggle-thumb {
+    transform: translateX(20px);
+    background-color: var(--color-accent);
+}
+
+
+/* =========================
+   Collection Stats
+========================= */
+
+.collection-stats {
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: var(--space-md);
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    padding: 1.2rem;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.stat-number {
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.stat-label {
+    color: var(--color-text-secondary);
+
+    font-size: 0.75rem;
+}
+
+/* =========================
+   Clear Uploaded Music Button
+========================= */
+
+.clear-uploaded-music-button {
+    padding: 0.75rem 1rem;
+
+    color: var(--color-accent);
+    background-color: var(--color-hover);
+
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.75rem;
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.clear-uploaded-music-button:hover {
+    color: var(--color-background);
+    background-color: var(--color-accent);
+}
+
+/* =========================
+   About REWIND
+========================= */
+
+.about-rewind {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-xl);
+
+    padding: 1.2rem;
+}
+
+.about-tagline {
+    margin-bottom: 0.35rem;
+
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.9rem;
+}
+
+.about-rewind p:not(.about-tagline) {
+    max-width: 520px;
+
+    color: var(--color-text-secondary);
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+
+.about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+
+    text-align: right;
+}
+
+/* =========================
+   Theme Picker
+========================= */
+
+.theme-setting-row {
+    align-items: flex-start;
+}
+
+.theme-picker {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: var(--space-sm);
+}
+
+.theme-option {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+
+    padding: 0.65rem;
+
+    color: var(--color-text-secondary);
+    background-color: var(--color-background);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    cursor: pointer;
+
+    transition:
+        border-color var(--transition-fast),
+        transform var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+.theme-option:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-accent);
+}
+
+.theme-option.active {
+    color: var(--color-text-primary);
+    border-color: var(--color-accent);
+    background-color: var(--color-hover);
+}
+
+.theme-preview {
+    display: flex;
+    gap: 0.3rem;
+
+    width: 100%;
+    height: 42px;
+
+    padding: 0.45rem;
+
+    border-radius: 4px;
+}
+
+.theme-preview span {
+    flex: 1;
+    border-radius: 3px;
+}
+
+
+/* REWIND preview */
+
+.theme-preview-rewind {
+    background-color: #0b1011;
+}
+
+.theme-preview-rewind span:nth-child(1) {
+    background-color: #141c1d;
+}
+
+.theme-preview-rewind span:nth-child(2) {
+    background-color: #7ba7af;
+}
+
+.theme-preview-rewind span:nth-child(3) {
+    background-color: #e2e4d2;
+}
+
+
+/* Matcha Pink preview */
+
+.theme-preview-matcha {
+    background-color: #202a24;
+}
+
+.theme-preview-matcha span:nth-child(1) {
+    background-color: #29362e;
+}
+
+.theme-preview-matcha span:nth-child(2) {
+    background-color: #c98f98;
+}
+
+.theme-preview-matcha span:nth-child(3) {
+    background-color: #eee2d3;
+}
+
+/* Cream preview */
+
+.theme-preview-cream {
+    background-color: #eee7da;
+}
+
+.theme-preview-cream span:nth-child(1) {
+    background-color: #ddd2c0;
+}
+
+.theme-preview-cream span:nth-child(2) {
+    background-color: #6f8375;
+}
+
+.theme-preview-cream span:nth-child(3) {
+    background-color: #332f2b;
+}
+
+
+.theme-option-name {
+    font-family: "DM Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+}

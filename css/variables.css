@@ -1,0 +1,96 @@
+
+:root {
+/* Brand colors */
+--color-blue: #7ba7af;
+--color-cream: #e2e4d2;
+--color-green: #455957;
+--color-charcoal: #353e43;
+
+/* Interface colors */
+--color-background: #0b1011;
+--color-surface: #141c1d;
+--color-surface-light: #1b2527;
+
+--color-accent: var(--color-blue);
+
+--color-text-primary: var(--color-cream);
+--color-text-secondary: rgba(226, 228, 210, 0.65);
+
+--color-border: rgba(226, 228, 210, 0.12);
+--color-hover: rgba(123, 167, 175, 0.12);
+--color-active: rgba(123, 167, 175, 0.20);
+
+    /* Sizing */
+    --sidebar-width: 260px;
+    --player-height: 90px;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    /* Shape */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+
+    /* Animation */
+    --transition-fast: 160ms ease;
+    --transition-normal: 250ms ease;
+}
+
+/* =========================
+   Cream Theme
+========================= */
+
+body.theme-cream {
+    /* Brand colors */
+    --color-blue: #78969a;
+    --color-cream: #fffaf0;
+    --color-green: #687a70;
+    --color-charcoal: #3b3834;
+
+    /* Interface colors */
+    --color-background: #eee7da;
+
+    --color-surface: #ddd2c0;
+    --color-surface-light: #cfc1ac;
+
+    --color-accent: #6f8375;
+
+    --color-text-primary: #332f2b;
+    --color-text-secondary: rgba(51, 47, 43, 0.65);
+
+    --color-border: rgba(75, 65, 55, 0.20);
+    --color-hover: rgba(111, 131, 117, 0.12);
+    --color-active: rgba(111, 131, 117, 0.20);
+}
+
+/* =========================
+   Matcha Pink Theme
+========================= */
+
+body.theme-matcha {
+    /* Brand colors */
+    --color-blue: #c98f98;
+    --color-cream: #eee2d3;
+    --color-green: #71806b;
+    --color-charcoal: #26322b;
+
+    /* Interface colors */
+    --color-background: #202a24;
+    --color-surface: #29362e;
+    --color-surface-light: #35443a;
+
+    --color-accent: #c98f98;
+
+    --color-text-primary: #eee2d3;
+    --color-text-secondary: rgba(238, 226, 211, 0.65);
+
+    --color-border: rgba(201, 143, 152, 0.18);
+
+    --color-hover: rgba(201, 143, 152, 0.12);
+    --color-active: rgba(201, 143, 152, 0.22);
+}

@@ -1,0 +1,1166 @@
+/* =========================
+   Add to Collection Page
+========================= */
+
+#upload-page .page-header {
+    text-align: left;
+
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+#upload-page .page-header h1 {
+    font-family: "DM Mono", monospace;
+
+    font-size: 2.4rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    margin-top: 5px;
+
+    color: var(--color-text-primary);
+}
+
+#upload-page .page-header > div > p:last-child {
+    color: var(--color-text-secondary);
+}
+
+
+
+/* =========================
+   Upload Layout
+========================= */
+
+.upload-section {
+    width: 100%;
+}
+
+.upload-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(360px, 0.9fr)
+        minmax(500px, 1.2fr);
+
+    gap: 2rem;
+
+    align-items: stretch;
+}
+
+
+
+/* =========================
+   Shared Panels
+========================= */
+
+.upload-form,
+.upload-preview {
+    min-width: 0;
+
+    padding: 1.6rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            color-mix(
+                in srgb,
+                var(--color-surface) 94%,
+                transparent
+            ),
+            color-mix(
+                in srgb,
+                var(--color-background) 96%,
+                transparent
+            )
+        );
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+
+
+/* =========================
+   Left Panel
+========================= */
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.2rem;
+}
+
+
+
+/* =========================
+   Left Panel Header
+========================= */
+
+.upload-panel-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 0.9rem;
+
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.upload-panel-eyebrow {
+    margin: 0;
+
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+
+
+/* =========================
+   Form Fields
+========================= */
+
+.upload-form .form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.45rem;
+}
+
+.upload-form .form-group > label:first-child {
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.upload-form input[type="text"] {
+    width: 100%;
+
+    padding: 0.9rem 1rem;
+
+    color: var(--color-text-primary);
+
+    background-color:
+        color-mix(
+            in srgb,
+            var(--color-background) 92%,
+            transparent
+        );
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.upload-form input[type="text"]::placeholder {
+    color: var(--color-text-secondary);
+
+    opacity: 0.55;
+}
+
+.upload-form input[type="text"]:focus {
+    border-color: var(--color-accent);
+
+    box-shadow:
+        0 0 0 2px
+        color-mix(
+            in srgb,
+            var(--color-accent) 12%,
+            transparent
+        );
+}
+
+
+
+/* =========================
+   Hidden File Inputs
+========================= */
+
+.upload-file-input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+
+/* =========================
+   Upload Dropzones
+========================= */
+
+.upload-dropzone {
+    min-height: 92px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.15rem;
+
+    padding: 1rem 1.2rem;
+
+    background-color:
+        color-mix(
+            in srgb,
+            var(--color-background) 90%,
+            transparent
+        );
+
+    border: 1px dashed
+        color-mix(
+            in srgb,
+            var(--color-accent) 60%,
+            var(--color-border)
+        );
+
+    border-radius: var(--radius-sm);
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.upload-dropzone:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--color-accent);
+
+    background-color:
+        color-mix(
+            in srgb,
+            var(--color-accent) 4%,
+            var(--color-background)
+        );
+}
+
+
+
+/* =========================
+   Dropzone Icons
+========================= */
+
+.upload-dropzone-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-accent);
+
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+
+    font-size: 1.45rem;
+
+    line-height: 1;
+}
+
+.audio-icon {
+    border: none;
+
+    font-size: 2rem;
+}
+
+
+
+/* =========================
+   Dropzone Text
+========================= */
+
+.upload-dropzone-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.35rem;
+}
+
+.upload-dropzone-content strong {
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.upload-dropzone-content span {
+    overflow: hidden;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.75rem;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+/* =========================
+   Upload Buttons
+========================= */
+
+.upload-actions {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 0.8rem;
+
+    margin-top: auto;
+    padding-top: 0.2rem;
+}
+
+.upload-reset-button,
+.upload-submit-button {
+    min-height: 44px;
+
+    padding: 0.75rem 1.05rem;
+
+    border-radius: var(--radius-sm);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.78rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.upload-reset-button {
+    color: var(--color-text-primary);
+
+    background-color: transparent;
+
+    border: 1px solid var(--color-border);
+}
+
+.upload-submit-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.45rem;
+
+    color: var(--color-charcoal);
+
+    background-color: var(--color-accent);
+
+    border: 1px solid var(--color-accent);
+}
+
+.upload-reset-button:hover,
+.upload-submit-button:hover {
+    transform: translateY(-2px);
+}
+
+.upload-submit-icon {
+    font-size: 1rem;
+}
+
+
+
+/* =========================
+   Right Preview Panel
+========================= */
+
+.upload-preview {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.4rem;
+}
+
+
+
+/* =========================
+   Preview Header
+========================= */
+
+.preview-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    padding-bottom: 1rem;
+
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.preview-heading {
+    margin: 0;
+
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.preview-recording-label {
+    margin-top: 0.35rem;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.preview-record-number {
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+
+/* =========================
+   Main Track Preview Card
+========================= */
+
+.preview-track-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 0.85fr)
+        minmax(0, 1.15fr);
+
+    gap: 1.5rem;
+
+    padding: 0.85rem;
+
+    background-color:
+        color-mix(
+            in srgb,
+            var(--color-background) 92%,
+            transparent
+        );
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+
+
+/* =========================
+   Preview Cover
+========================= */
+
+.preview-cover {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            color-mix(
+                in srgb,
+                var(--color-accent) 7%,
+                transparent
+            ),
+            transparent 70%
+        ),
+        var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+}
+
+.preview-cover-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.35rem;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+
+    text-align: center;
+}
+
+.preview-cover-brand {
+    color: var(--color-text-primary);
+
+    font-size: 1rem;
+
+    letter-spacing: 0.12em;
+}
+
+.preview-cover-empty {
+    font-size: 0.62rem;
+
+    letter-spacing: 0.08em;
+}
+
+.preview-cover img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.preview-cover [hidden] {
+    display: none !important;
+}
+
+/* =========================
+   Track Details
+========================= */
+
+.preview-track-details {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 0.6rem 0.2rem 0.3rem;
+}
+
+.preview-track-top {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+.preview-track-text {
+    min-width: 0;
+}
+
+.preview-track-text h2 {
+    margin: 0 0 0.35rem;
+
+    color: var(--color-text-primary);
+
+    font-family: inherit;
+
+    font-size: 1.55rem;
+    font-weight: 500;
+
+    line-height: 1.25;
+
+    display: -webkit-box;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    overflow: hidden;
+
+    overflow-wrap: anywhere;
+}
+
+.preview-song-artist {
+    max-width: 100%;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.95rem;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.preview-song-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+    margin-top: 0.65rem;
+
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 0.05em;
+}
+
+.preview-meta-divider {
+    color: var(--color-text-secondary);
+}
+
+
+/* =========================
+   Preview Actions
+========================= */
+
+.preview-track-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    color: var(--color-text-primary);
+}
+
+.preview-heart {
+    font-size: 1.6rem;
+
+    line-height: 1;
+}
+
+.preview-more {
+    color: var(--color-accent);
+
+    font-size: 1.1rem;
+
+    letter-spacing: 0.1em;
+}
+
+
+
+/* =========================
+   Memory Quote
+========================= */
+
+.preview-memory {
+    position: relative;
+
+    margin-top: 1.2rem;
+
+    padding-top: 1rem;
+    padding-right: 78px;
+
+    border-top: 1px dashed var(--color-border);
+}
+
+.preview-quote-mark {
+    display: block;
+
+    margin-bottom: 0.35rem;
+
+    color: var(--color-accent);
+
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.preview-memory p {
+    margin: 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Tiny Cassette
+========================= */
+
+.preview-mini-cassette {
+    position: absolute;
+
+    right: 5px;
+    bottom: 4px;
+
+    width: 64px;
+    height: 40px;
+
+    transform: rotate(14deg);
+
+    border: 1px solid
+        color-mix(
+            in srgb,
+            var(--color-text-secondary) 60%,
+            transparent
+        );
+
+    border-radius: 4px;
+
+    opacity: 0.55;
+}
+
+.preview-mini-cassette::before {
+    content: "";
+
+    position: absolute;
+
+    left: 9px;
+    right: 9px;
+    top: 7px;
+
+    height: 19px;
+
+    border: 1px solid
+        color-mix(
+            in srgb,
+            var(--color-text-secondary) 55%,
+            transparent
+        );
+
+    border-radius: 2px;
+}
+
+.mini-cassette-reel {
+    position: absolute;
+
+    top: 12px;
+
+    width: 9px;
+    height: 9px;
+
+    border: 1px solid
+        color-mix(
+            in srgb,
+            var(--color-text-secondary) 70%,
+            transparent
+        );
+
+    border-radius: 50%;
+}
+
+.reel-one {
+    left: 17px;
+}
+
+.reel-two {
+    right: 17px;
+}
+
+.mini-cassette-line {
+    position: absolute;
+
+    left: 17px;
+    right: 17px;
+    bottom: 5px;
+
+    height: 1px;
+
+    background-color:
+        color-mix(
+            in srgb,
+            var(--color-text-secondary) 60%,
+            transparent
+        );
+}
+
+
+
+/* =========================
+   Waveform
+========================= */
+
+.preview-waveform {
+    display: grid;
+
+    grid-template-columns:
+        32px
+        minmax(0, 1fr)
+        32px;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    width: 100%;
+
+    padding: 0.65rem 0;
+}
+
+.waveform-spark {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-accent);
+
+    font-family: serif;
+
+    font-size: 1.55rem;
+    line-height: 1;
+
+    opacity: 0.95;
+
+    transform: scaleX(0.7) scaleY(1.25);
+}
+
+.waveform-bars {
+    width: 100%;
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 0;
+
+    overflow: hidden;
+}
+
+.waveform-bars span {
+    width: 3px;
+
+    flex-shrink: 0;
+
+    background-color: var(--color-accent);
+
+    border-radius: 1px;
+
+    opacity: 0.9;
+}
+
+
+/* Random Looking Wave Heights */
+
+.waveform-bars span:nth-child(16n + 1) {
+    height: 18px;
+}
+
+.waveform-bars span:nth-child(16n + 2) {
+    height: 34px;
+}
+
+.waveform-bars span:nth-child(16n + 3) {
+    height: 52px;
+}
+
+.waveform-bars span:nth-child(16n + 4) {
+    height: 38px;
+}
+
+.waveform-bars span:nth-child(16n + 5) {
+    height: 62px;
+}
+
+.waveform-bars span:nth-child(16n + 6) {
+    height: 27px;
+}
+
+.waveform-bars span:nth-child(16n + 7) {
+    height: 46px;
+}
+
+.waveform-bars span:nth-child(16n + 8) {
+    height: 31px;
+}
+
+.waveform-bars span:nth-child(16n + 9) {
+    height: 22px;
+}
+
+.waveform-bars span:nth-child(16n + 10) {
+    height: 42px;
+}
+
+.waveform-bars span:nth-child(16n + 11) {
+    height: 55px;
+}
+
+.waveform-bars span:nth-child(16n + 12) {
+    height: 29px;
+}
+
+.waveform-bars span:nth-child(16n + 13) {
+    height: 48px;
+}
+
+.waveform-bars span:nth-child(16n + 14) {
+    height: 36px;
+}
+
+.waveform-bars span:nth-child(16n + 15) {
+    height: 24px;
+}
+
+.waveform-bars span:nth-child(16n + 16) {
+    height: 40px;
+}
+
+/* =========================
+   Tips Card
+========================= */
+
+.upload-tip-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem;
+
+    margin-top: auto;
+
+    background-color:
+        color-mix(
+            in srgb,
+            var(--color-background) 92%,
+            transparent
+        );
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.upload-tip-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color:
+        color-mix(
+            in srgb,
+            var(--color-surface) 90%,
+            transparent
+        );
+
+    border-radius: 8px;
+}
+
+
+
+/* =========================
+   Tiny Record Icon
+========================= */
+
+.tip-record {
+    position: relative;
+
+    width: 34px;
+    height: 34px;
+
+    display: block;
+
+    border: 1px solid var(--color-text-secondary);
+    border-radius: 50%;
+}
+
+.tip-record::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 6px;
+
+    border: 1px solid var(--color-text-secondary);
+    border-radius: 50%;
+}
+
+.tip-record span {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: var(--color-accent);
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* =========================
+   Tips Text
+========================= */
+
+.upload-tip-text h3 {
+    margin: 0 0 0.35rem;
+
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.upload-tip-text p {
+    margin: 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1200px) {
+
+    .upload-layout {
+        grid-template-columns:
+            minmax(330px, 0.95fr)
+            minmax(420px, 1.05fr);
+    }
+
+    .preview-track-card {
+        grid-template-columns:
+            minmax(150px, 0.85fr)
+            minmax(0, 1.15fr);
+    }
+
+}
+
+
+@media (max-width: 980px) {
+
+    .upload-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .upload-preview {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .upload-form,
+    .upload-preview {
+        padding: 1rem;
+    }
+
+    .preview-track-card {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-cover {
+        max-width: 280px;
+
+        margin: 0 auto;
+    }
+
+    .preview-track-details {
+        padding: 0.5rem;
+    }
+
+    .preview-memory {
+        padding-right: 0;
+    }
+
+    .preview-mini-cassette {
+        display: none;
+    }
+
+    .upload-actions {
+        width: 100%;
+    }
+
+    .upload-reset-button,
+    .upload-submit-button {
+        flex: 1;
+    }
+
+}

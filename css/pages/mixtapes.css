@@ -1,0 +1,1802 @@
+
+/* =========================
+   Mixtapes Page Header
+========================= */
+
+#mixtapes-page .page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-xl);
+
+    margin-top: var(--space-xl);
+    margin-bottom: 0.35rem;
+}
+
+#mixtapes-page .page-header > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#mixtapes-page .page-eyebrow {
+    margin: 0 0 0.4rem 0;
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+#mixtapes-page .page-header h1 {
+    margin: 0;
+
+    font-family: "DM Mono", monospace;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-text-primary);
+}
+
+#mixtapes-page .page-header > div > p:last-child {
+    margin: 0.7rem 0 0 0;
+
+    color: var(--color-text-secondary);
+}
+/* =========================
+   Mixtapes Page
+========================= */
+
+.create-mixtape-button {
+    margin-top: 1.65rem;
+    padding: 0.8rem 1rem;
+
+    color: var(--color-charcoal);
+    background-color: var(--color-accent);
+
+    border-radius: var(--radius-sm);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.create-mixtape-button:hover {
+    background-color: var(--color-cream);
+    transform: translateY(-2px);
+}
+
+.mixtape-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 320px));
+
+    gap: 1.2rem;
+
+    justify-content: start;
+}
+.mixtape-empty-state {
+    padding: var(--space-xl);
+
+    color: var(--color-text-secondary);
+    background-color: rgba(226, 228, 210, 0.03);
+
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+
+    text-align: center;
+}
+
+.mixtape-empty-state p:first-child {
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+}
+
+.mixtape-empty-state p:last-child {
+    margin-top: var(--space-xs);
+    font-size: 0.85rem;
+}
+
+/* =========================
+   Mixtape Card
+========================= */
+
+.mixtape-card {
+
+    width: 100%;
+    max-width: 320px;
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transition-fast);
+}
+
+.mixtape-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   Cassette
+========================= */
+
+.cassette {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 1.72 / 1;
+
+    padding: 0.8rem 0.9rem;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #414c4d,
+            #293233
+        );
+
+    border: 1px solid rgba(226, 228, 210, 0.18);
+    border-radius: 10px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -8px 18px rgba(0, 0, 0, 0.18),
+        0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================
+   Cassette Top
+========================= */
+
+.cassette-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 0.55rem;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    margin-right: 14px;
+}
+
+.cassette-side {
+    display: grid;
+    place-items: center;
+
+    width: 22px;
+    height: 22px;
+
+    color: var(--color-charcoal);
+    background-color: var(--mood-accent);
+
+    border-radius: 50%;
+
+    font-weight: 600;
+    margin-left: 14px;
+}
+
+.cassette-brand {
+    opacity: 0.7;
+}
+
+
+/* =========================
+   Paper Label
+========================= */
+
+.cassette-label {
+    position: relative;
+    padding: 0.4rem 0.6rem 0.3rem;
+    
+
+    background-color: var(--color-cream);
+
+    border-radius: 3px 3px 0 0;
+}
+
+.cassette-title {
+    margin: 0;
+
+    overflow: hidden;
+
+    color: var(--color-charcoal);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cassette-line {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    margin-top: 0.25rem;
+
+    background-color: var(--mood-accent);
+
+    opacity: 0.75;
+}
+
+/* =========================
+   Cassette Window
+========================= */
+
+.cassette-window {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 46px;
+
+    padding: 0 0.85rem;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0b1011,
+            #171e1f 50%,
+            #0a0e0f
+        );
+
+    border:
+        5px solid var(--color-cream);
+
+    border-top: 0;
+
+    border-radius:
+        0 0 4px 4px;
+
+    box-shadow:
+        inset 0 0 14px rgba(0, 0, 0, 0.75),
+        inset 0 2px 2px rgba(255, 255, 255, 0.025),
+        0 2px 0 rgba(0, 0, 0, 0.22);
+}
+
+.cassette-window::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 4px;
+
+    pointer-events: none;
+
+    border:
+        1px solid rgba(226, 228, 210, 0.08);
+
+    box-shadow:
+        inset 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+/* =========================
+   Cassette Reels
+========================= */
+
+.cassette-reel {
+    position: relative;
+
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    border: 3px solid #c6c8b8;
+    border-radius: 50%;
+
+    background:
+        repeating-conic-gradient(
+            from 0deg,
+            #d9dbc9 0deg 8deg,
+            #667170 8deg 14deg,
+            #d9dbc9 14deg 22deg
+        );
+
+    box-shadow:
+        0 0 0 3px #171d1e,
+        inset 0 0 0 3px rgba(0, 0, 0, 0.22),
+        0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+
+/* dark inner ring */
+
+.cassette-reel::before {
+    content: "";
+
+    position: absolute;
+    inset: 8px;
+
+    background-color: #202829;
+
+    border: 2px solid #8f9994;
+    border-radius: 50%;
+
+    box-shadow:
+        inset 0 0 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* center hub */
+
+.cassette-reel::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    background-color: #0c1112;
+
+    border: 1px solid rgba(226, 228, 210, 0.35);
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+/* =========================
+   Tape Between Reels
+========================= */
+
+.cassette-tape-line {
+    height: 8px;
+
+    flex: 1;
+
+    margin: 0 0.5rem;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #0b0f10 0 7px,
+        #151b1c 7px 9px
+    );
+
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================
+   Cassette Bottom
+========================= */
+
+.cassette-bottom {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 0.45rem;
+    padding-top: 0;
+}
+
+.cassette-bottom-plate {
+    position: relative;
+
+    width: 78%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 0.75rem;
+
+    background:
+        linear-gradient(
+            180deg,
+            #323c3d 0%,
+            #232b2c 55%,
+            #171d1e 100%
+        );
+
+    clip-path:
+        polygon(
+            9% 0%,
+            91% 0%,
+            100% 100%,
+            0% 100%
+        );
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        inset 0 3px 5px rgba(255, 255, 255, 0.025),
+        inset 0 -6px 8px rgba(0, 0, 0, 0.3);
+
+    transform: translateY(0);
+}
+
+/* =========================
+   Bottom Holes
+========================= */
+
+.cassette-bottom-hole {
+    width: 9px;
+    height: 9px;
+
+    background-color: #0b0f10;
+
+    border: 1px solid rgba(226, 228, 210, 0.12);
+    border-radius: 50%;
+
+    box-shadow:
+        inset 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =========================
+   Bottom Center Marks
+========================= */
+
+.cassette-bottom-center {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.cassette-bottom-center span {
+    width: 5px;
+    height: 5px;
+
+    display: block;
+
+    background-color: #0d1213;
+
+    border: 1px solid rgba(226, 228, 210, 0.12);
+    border-radius: 50%;
+}
+
+.cassette::before,
+.cassette::after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+
+    width: 7px;
+    height: 7px;
+
+    background:
+        linear-gradient(
+            45deg,
+            transparent 43%,
+            rgba(226, 228, 210, 0.28) 44% 56%,
+            transparent 57%
+        ),
+        #1a2021;
+
+    border: 1px solid rgba(226, 228, 210, 0.12);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+.cassette::before {
+    left: 10px;
+}
+
+.cassette::after {
+    right: 10px;
+}
+
+/* =========================
+   Cassette Shell Seams
+========================= */
+
+.cassette {
+    position: relative;
+}
+
+.cassette .cassette-label,
+.cassette .cassette-window,
+.cassette .cassette-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.cassette::marker {
+    display: none;
+}
+
+
+/* inner shell border */
+
+.cassette {
+    box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, 0.025),
+        inset 0 0 0 7px rgba(0, 0, 0, 0.08),
+        inset 0 -10px 18px rgba(0, 0, 0, 0.16),
+        0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+
+/* thin seam across cassette body */
+
+.cassette-label::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -4px;
+
+    height: 1px;
+
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+
+/* subtle side grooves */
+
+.cassette-window::before,
+.cassette-window::after {
+    content: "";
+
+    position: absolute;
+
+    top: 6px;
+    bottom: 6px;
+
+    width: 2px;
+
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.cassette-window::before {
+    left: 6px;
+}
+
+.cassette-window::after {
+    right: 6px;
+}
+
+/* =========================
+   Bottom Corner Screws
+========================= */
+
+.cassette-bottom::before,
+.cassette-bottom::after {
+    content: "";
+
+    position: absolute;
+    bottom: 14px;
+
+    width: 7px;
+    height: 7px;
+
+    background:
+        linear-gradient(
+            45deg,
+            transparent 43%,
+            rgba(226, 228, 210, 0.28) 44% 56%,
+            transparent 57%
+        ),
+        #1a2021;
+
+    border: 1px solid rgba(226, 228, 210, 0.12);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+.cassette-bottom::before {
+    left: 10px;
+}
+
+.cassette-bottom::after {
+    right: 10px;
+}
+
+
+/* =========================
+   Printed Cassette Markings
+========================= */
+
+.cassette-bottom-plate::after {
+    content: none;
+    position: absolute;
+
+    left: 50%;
+    bottom: 4px;
+
+    transform:
+        translateX(-50%);
+
+    color:
+        rgba(226, 228, 210, 0.25);
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 0.36rem;
+
+    letter-spacing: 0.08em;
+
+    white-space: nowrap;
+}
+
+/* =========================
+   Cassette Body Texture
+========================= */
+
+.cassette {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.025),
+            transparent 28%
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.012) 0,
+            rgba(255, 255, 255, 0.012) 1px,
+            transparent 1px,
+            transparent 3px
+        ),
+        linear-gradient(
+            145deg,
+            #414c4d,
+            #293233
+        );
+}
+
+
+/* =========================
+   Label Paper Detail
+========================= */
+
+.cassette-label {
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(53, 62, 67, 0.035) 0,
+            rgba(53, 62, 67, 0.035) 1px,
+            transparent 1px,
+            transparent 6px
+        ),
+        var(--color-cream);
+}
+
+
+/* =========================
+   Slight Reel Depth
+========================= */
+
+.cassette-window {
+    box-shadow:
+        inset 0 0 14px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+/* =========================
+   Mixtape Information
+========================= */
+
+.mixtape-card-info {
+    padding-top: 0.45rem;
+}
+
+.mixtape-card-info h3 {
+    margin: 0;
+
+    overflow: hidden;
+
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.82rem;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mixtape-card-info p {
+    margin-top: 0.15rem;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.mixtape-detail {
+    margin-top: var(--space-xl);
+}
+
+.mixtape-back-button {
+    margin-bottom: var(--space-xl);
+
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.75rem;
+
+    cursor: pointer;
+}
+
+.mixtape-detail-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-xl);
+
+    margin-bottom: var(--space-xl);
+}
+
+.mixtape-detail-header h2 {
+    margin: 0.3rem 0;
+
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.mixtape-detail-header p {
+    color: var(--color-text-secondary);
+}
+
+.add-tracks-button {
+    padding: 0.8rem 1rem;
+
+    color: var(--color-charcoal);
+    background-color: var(--color-accent);
+
+    border-radius: var(--radius-sm);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+
+    cursor: pointer;
+}
+
+.mixtape-detail-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.rename-mixtape-button {
+    padding: 0.8rem 1rem;
+
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+
+    cursor: pointer;
+}
+
+.rename-mixtape-button:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-accent);
+}
+
+.delete-mixtape-button {
+    padding: 0.8rem 1rem;
+
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+
+    cursor: pointer;
+}
+
+.delete-mixtape-button:hover {
+    color: #d99b98;
+    border-color: #d99b98;
+}
+
+/* =========================
+  Mood Tags
+========================= */
+
+.form-group select {
+    width: 100%;
+
+    padding: 0.8rem 0.9rem;
+
+    color: var(--color-text-primary);
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    font: inherit;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    border-color: var(--color-accent);
+}
+
+/* =========================
+   Mixtape Sections
+========================= */
+
+.mixtape-section {
+    margin-top: 0.65rem;
+    margin-bottom: 0.35rem;
+}
+
+.mixtape-section-description {
+    margin-top: 0.35rem;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.8rem;
+}
+/* =========================
+   Cassette Mood Accents
+========================= */
+
+.cassette {
+    --mood-accent: var(--color-accent);
+}
+
+
+/* No Mood */
+
+.cassette.mood-none {
+    --mood-accent: var(--color-accent);
+}
+
+
+/* Chill */
+
+.cassette.mood-chill {
+    --mood-accent: #8fa8a0;
+}
+
+
+/* Late Night */
+
+.cassette.mood-late-night {
+    --mood-accent: #75889a;
+}
+
+
+/* Study */
+
+.cassette.mood-study {
+    --mood-accent: #a4aa8b;
+}
+
+
+/* Romance */
+
+.cassette.mood-romance {
+    --mood-accent: #b98f8f;
+}
+
+
+/* Energy */
+
+.cassette.mood-energy {
+    --mood-accent: #b49a6a;
+}
+
+
+/* Nostalgia */
+
+.cassette.mood-nostalgia {
+    --mood-accent: #9e866f;
+}
+
+/* =========================
+   Browse by Mood
+========================= */
+
+.mood-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
+
+    gap: 0.65rem;
+}
+
+
+/* =========================
+   Mood Card
+========================= */
+
+.mood-card {
+    --mood-color: var(--color-accent);
+
+    position: relative;
+
+    min-height: 68px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 0.65rem 0.7rem;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.025),
+            transparent 50%
+        ),
+        var(--color-surface);
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius: var(--radius-sm);
+
+    color: var(--color-text-primary);
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        transform 160ms ease,
+        border-color 160ms ease,
+        background-color 160ms ease;
+}
+
+
+/* little label number */
+
+.mood-card-number {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.12em;
+
+    color: var(--color-text-secondary);
+}
+
+
+/* mood name */
+
+.mood-card-name {
+    position: relative;
+    z-index: 2;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+/* cassette-label line */
+
+.mood-card-line {
+    position: absolute;
+
+    left: 0.8rem;
+    right: 0.8rem;
+    bottom: 0.65rem;
+
+    height: 3px;
+
+    background-color: var(--mood-color);
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   Hover
+========================= */
+
+.mood-card:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--mood-color);
+}
+
+
+/* =========================
+   Selected Mood
+========================= */
+
+.mood-card.active {
+    border-color: var(--mood-color);
+
+    box-shadow:
+        inset 0 -3px 0 var(--mood-color);
+}
+
+
+/* =========================
+   Mood Colors
+========================= */
+
+.mood-all {
+    --mood-color: var(--color-accent);
+}
+
+.mood-chill {
+    --mood-color: #7ba7af;
+}
+
+.mood-late-night {
+    --mood-color: #777b9e;
+}
+
+.mood-study {
+    --mood-color: #92966f;
+}
+
+.mood-romance {
+    --mood-color: #b9828c;
+}
+
+.mood-energy {
+    --mood-color: #b89567;
+}
+
+.mood-nostalgia {
+    --mood-color: #9b826d;
+}
+
+/* =========================
+   Mixtape Customizer Modal
+========================= */
+
+.mixtape-customizer-modal {
+    width: min(1200px, 94vw);
+
+    padding: 1.25rem;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: visible;
+}
+
+
+/* =========================
+   Customizer Header
+========================= */
+
+.mixtape-customizer-subtitle {
+    margin-top: 0.35rem;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   Main Layout
+========================= */
+
+.mixtape-customizer-layout {
+    display: grid;
+
+     grid-template-columns:
+        minmax(340px, 0.85fr)
+        minmax(450px, 1.15fr);
+
+    gap: 1.25rem;
+
+    margin-top: 1.1rem;
+}
+
+
+/* =========================
+   Left Controls
+========================= */
+
+.mixtape-customizer-controls {
+    min-width: 0;
+
+    padding: 0.9rem;
+
+    background-color: var(--color-background);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+
+.mixtape-customizer-controls
+.form-group + .form-group {
+    margin-top: 0.75rem;
+}
+
+
+.mixtape-customizer-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 0.9rem 0;
+
+    background-color: var(--color-border);
+}
+
+
+.mixtape-customizer-label {
+    margin-bottom: 0.7rem;
+
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   Option Groups
+========================= */
+
+.mixtape-option-group {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+
+.mixtape-option-group + .mixtape-option-group {
+    margin-top: 0.7rem;
+}
+
+
+.mixtape-option-group legend {
+    margin-bottom: 0.4rem;
+
+    color: var(--color-text-primary);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================
+   Color Swatches
+========================= */
+
+.mixtape-swatch-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.55rem;
+}
+
+
+.mixtape-swatch-option {
+    position: relative;
+
+    display: inline-flex;
+
+    cursor: pointer;
+}
+
+
+.mixtape-swatch-option input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.cassette-swatch {
+    width: 32px;
+    height: 32px;
+
+    display: block;
+
+    border: 2px solid transparent;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 1px var(--color-border);
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease;
+}
+
+
+.mixtape-swatch-option:hover
+.cassette-swatch {
+    transform: scale(1.08);
+}
+
+
+.mixtape-swatch-option
+input:checked
++ .cassette-swatch {
+    border-color: var(--color-background);
+
+    box-shadow:
+        0 0 0 2px var(--color-accent);
+}
+
+
+/* Shell Colors */
+
+.shell-charcoal {
+    background-color: #353e43;
+}
+
+.shell-cream {
+    background-color: #d9d2bd;
+}
+
+.shell-blue {
+    background-color: #657f85;
+}
+
+.shell-brown {
+    background-color: #69584d;
+}
+
+.shell-red {
+    background-color: #875f5d;
+}
+
+
+/* Accent Colors */
+
+.accent-blue {
+    background-color: #7ba7af;
+}
+
+.accent-sage {
+    background-color: #819b85;
+}
+
+.accent-rose {
+    background-color: #b9868d;
+}
+
+.accent-amber {
+    background-color: #b99a63;
+}
+
+
+/* =========================
+   Choice Buttons
+========================= */
+
+.mixtape-choice-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.45rem;
+}
+
+
+.mixtape-choice {
+    position: relative;
+
+    cursor: pointer;
+}
+
+
+.mixtape-choice input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.mixtape-choice span {
+    min-height: 32px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.45rem 0.7rem;
+
+    color: var(--color-text-secondary);
+
+    background-color: transparent;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.63rem;
+
+    letter-spacing: 0.04em;
+
+    transition:
+        color 0.18s ease,
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.mixtape-choice:hover span {
+    color: var(--color-text-primary);
+
+    border-color: var(--color-accent);
+}
+
+
+.mixtape-choice
+input:checked
++ span {
+    color: var(--color-charcoal);
+
+    background-color: var(--color-accent);
+
+    border-color: var(--color-accent);
+}
+
+
+/* =========================
+   Sticker Options
+========================= */
+
+.sticker-options
+.mixtape-choice span {
+    min-width: 34px;
+
+    font-size: 0.85rem;
+}
+
+
+.sticker-options
+.mixtape-choice:first-child span {
+    font-size: 0.62rem;
+}
+
+
+/* =========================
+   Right Preview Panel
+========================= */
+
+.mixtape-customizer-preview {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+
+    background-color: var(--color-background);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+
+.mixtape-preview-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding-bottom: 0.85rem;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+
+.mixtape-preview-note {
+    margin-top: 0.25rem;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.7rem;
+}
+
+
+.mixtape-preview-header > span {
+    flex-shrink: 0;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   Preview Stage
+========================= */
+
+.mixtape-preview-stage {
+    flex: 1;
+
+    min-height: 285px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0.8rem;
+
+    padding: 1.2rem;
+
+    background:
+        linear-gradient(
+            180deg,
+            color-mix(
+                in srgb,
+                var(--color-surface) 75%,
+                transparent
+            ),
+            var(--color-background)
+        );
+
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+
+/* =========================
+   Preview Cassette
+========================= */
+
+.mixtape-preview-cassette {
+    border-width: 3px;
+    width: min(100%, 440px);
+
+    transform: scale(1);
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.mixtape-preview-cassette:hover {
+    transform: scale(1.015);
+}
+
+
+/* =========================
+   Preview Sticker
+========================= */
+
+.mixtape-preview-sticker {
+    position: absolute;
+
+    top: 0.35rem;
+    right: 0.45rem;
+
+    z-index: 4;
+
+    color: var(--color-accent);
+
+    font-size: 1.1rem;
+
+    transform: rotate(8deg);
+}
+
+
+/* =========================
+   Preview Footer Meta
+========================= */
+
+.mixtape-preview-meta {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-top: 0.6rem;
+
+    padding-top: 0.6rem;
+
+    color: var(--color-text-secondary);
+
+    border-top: 1px solid var(--color-border);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   Customizer Actions
+========================= */
+
+.mixtape-customizer-actions {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+
+    border-top: 1px solid var(--color-border);
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+
+    .mixtape-customizer-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .mixtape-preview-stage {
+    min-height: 260px;
+
+    margin-top: 0.7rem;
+
+    padding: 1rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .mixtape-customizer-modal {
+        width: 94vw;
+
+        padding: 1rem;
+    }
+
+
+    .mixtape-customizer-controls,
+    .mixtape-customizer-preview {
+        padding: 0.85rem;
+    }
+
+
+    .mixtape-preview-stage {
+        min-height: 240px;
+
+        padding: 1rem;
+    }
+
+
+    .cassette-swatch {
+        width: 28px;
+        height: 28px;
+    }
+
+}
+
+/* =========================
+   Custom Cassette Shells
+========================= */
+
+.cassette.custom-shell-charcoal {
+    background-color: #353e43;
+    border-color: #242b2f;
+}
+
+.cassette.custom-shell-cream {
+    background-color: #c9c1a9;
+    border-color: #aaa18b;
+}
+
+.cassette.custom-shell-blue {
+    background-color: #607980;
+    border-color: #475f65;
+}
+
+.cassette.custom-shell-brown {
+    background-color: #6e584a;
+    border-color: #503f35;
+}
+
+.cassette.custom-shell-red {
+    background-color: #855c5a;
+    border-color: #684543;
+}
+/* =========================
+   Custom Cassette Labels
+========================= */
+
+/* Cream */
+
+.cassette.custom-label-cream
+.cassette-label {
+    background: #e2e4d2;
+}
+
+.cassette.custom-label-cream
+.cassette-window {
+    border-color: #e2e4d2;
+}
+
+
+/* White */
+
+.cassette.custom-label-white
+.cassette-label {
+    background: #f4f3ee;
+}
+
+.cassette.custom-label-white
+.cassette-window {
+    border-color: #f4f3ee;
+}
+
+
+/* Kraft */
+
+.cassette.custom-label-kraft
+.cassette-label {
+    background: #b9a17b;
+}
+
+.cassette.custom-label-kraft
+.cassette-window {
+    border-color: #b9a17b;
+}
+
+
+/* Faded */
+
+.cassette.custom-label-faded
+.cassette-label {
+    background: #c7c1ae;
+}
+
+.cassette.custom-label-faded
+.cassette-window {
+    border-color: #c7c1ae;
+}
+
+
+/* =========================
+   Custom Cassette Accents
+========================= */
+
+.cassette.custom-accent-blue
+.cassette-side,
+.cassette.custom-accent-blue
+.cassette-line {
+    background-color: #7ba7af;
+}
+
+
+.cassette.custom-accent-sage
+.cassette-side,
+.cassette.custom-accent-sage
+.cassette-line {
+    background-color: #819b85;
+}
+
+
+.cassette.custom-accent-rose
+.cassette-side,
+.cassette.custom-accent-rose
+.cassette-line {
+    background-color: #b9868d;
+}
+
+
+.cassette.custom-accent-amber
+.cassette-side,
+.cassette.custom-accent-amber
+.cassette-line {
+    background-color: #b99a63;
+}
+
+.mixtape-card-sticker {
+    position: absolute;
+
+    top: 0.35rem;
+    right: 0.45rem;
+
+    color: var(--color-charcoal);
+
+    font-size: 1rem;
+
+    transform: rotate(8deg);
+}
+
+
+.mixtape-card-type {
+    position: absolute;
+
+    left: 50%;
+    bottom: 4px;
+
+    transform: translateX(-50%);
+
+    color: rgba(226, 228, 210, 0.28);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.36rem;
+
+    letter-spacing: 0.08em;
+
+    white-space: nowrap;
+}

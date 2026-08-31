@@ -1,0 +1,252 @@
+/* =========================
+   Music Player
+========================= */
+
+.music-player {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+
+    height: var(--player-height);
+
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    align-items: center;
+    gap: var(--space-lg);
+
+    padding: var(--space-sm) var(--space-lg);
+
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+}
+
+
+/* =========================
+   Current Song
+========================= */
+
+.player-song {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.player-cover {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    background-color: var(--color-background);
+    border-radius: var(--radius-sm);
+}
+
+.player-cover img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.player-song-info {
+    min-width: 0;
+}
+
+.player-song-title {
+    overflow: hidden;
+
+    color: var(--color-text-primary);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.player-song-artist {
+    margin-top: 2px;
+
+    color: var(--color-text-secondary);
+    font-size: 0.75rem;
+}
+
+.player-favorite {
+    color: var(--color-text-secondary);
+
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+/* =========================
+   Controls
+========================= */
+
+.player-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.player-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+}
+
+.player-buttons button {
+    color: var(--color-text-secondary);
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.player-buttons button:hover {
+    color: var(--color-text-primary);
+}
+
+.player-toggle {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--color-charcoal) !important;
+    background-color: var(--color-accent) !important;
+
+    border-radius: 50%;
+
+    font-size: 0.9rem;
+}
+
+.player-toggle:hover {
+    transform: scale(1.06);
+}
+
+
+/* =========================
+   Progress
+========================= */
+
+.player-progress {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.player-current-time,
+.player-duration {
+    min-width: 34px;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.65rem;
+}
+
+.player-duration {
+    text-align: right;
+}
+
+.player-progress-bar {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+/* =========================
+   Volume
+========================= */
+
+.player-volume {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+}
+
+.player-volume span {
+    color: var(--color-accent);
+}
+
+.volume-slider {
+    width: 100px;
+    cursor: pointer;
+}
+
+/* =========================
+   Player Sliders
+========================= */
+
+.player-progress-bar,
+.volume-slider {
+    width: 100%;
+    height: 4px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: linear-gradient(
+        to right,
+        var(--color-accent) 0%,
+        var(--color-accent) var(--fill, 0%),
+        var(--color-surface-light) var(--fill, 0%),
+        var(--color-surface-light) 100%
+    );
+
+    border-radius: 999px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Thumb */
+.player-progress-bar::-webkit-slider-thumb,
+.volume-slider::-webkit-slider-thumb {
+    width: 12px;
+    height: 12px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-color: var(--color-cream);
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.player-progress-bar::-moz-range-thumb,
+.volume-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+
+    background-color: var(--color-cream);
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.volume-slider {
+    width: 110px;
+    flex: 0 0 110px;
+}
+
+.player-repeat.active,
+.player-shuffle.active {
+    color: var(--color-accent);
+}

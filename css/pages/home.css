@@ -1,0 +1,1302 @@
+/* =========================
+   Home Header
+========================= */
+
+.home-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+
+    margin-bottom: var(--space-xl);
+}
+
+.home-heading h1 {
+    margin: 0.2rem 0;
+
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+/* =========================
+   Home Section Headings
+========================= */
+
+.section-header h2 {
+    font-family: "DM Mono", monospace;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.section-eyebrow {
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.home-heading > p:last-child {
+    color: var(--color-text-secondary);
+}
+
+.page-eyebrow {
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.search-bar {
+    width: min(100%, 390px);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+
+    padding: 0.8rem 1rem;
+
+    background-color: rgba(226, 228, 210, 0.06);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+
+    transition:
+        border-color var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+.search-bar:focus-within {
+    background-color: rgba(226, 228, 210, 0.09);
+    border-color: var(--color-accent);
+}
+
+.search-icon {
+    flex-shrink: 0;
+
+    color: var(--color-accent);
+    font-size: 1.1rem;
+}
+
+.search-bar input {
+    width: 100%;
+
+    color: var(--color-text-primary);
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+/* =========================
+   Now Spinning
+========================= */
+
+.now-spinning {
+    position: relative;
+    
+    width: 100%;
+    max-width: 920px;
+    min-height: 230px;
+
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+
+    display: grid;
+    grid-template-columns:
+        52px
+        230px
+        minmax(0, 1fr)
+        105px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #171d1d 0%,
+            #101616 100%
+        );
+
+    border: 1px solid #303939;
+    border-radius: 14px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.035),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+        0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   Left Speaker Panel
+========================= */
+
+.stereo-speaker {
+    position: relative;
+
+    border-right: 1px solid #303737;
+
+    background:
+        linear-gradient(
+            90deg,
+            #151b1b,
+            #111717
+        );
+}
+
+
+/* =========================
+   CD Chamber
+========================= */
+
+.cd-chamber {
+    position: relative;
+
+    min-width: 0;
+
+    display: grid;
+    place-items: center;
+
+    padding: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171d1d,
+            #101515
+        );
+
+    border-right: 1px solid #303737;
+}
+
+
+/* =========================
+   CD
+========================= */
+
+.cd-disc {
+    position: relative;
+
+    width: 190px;
+    height: 190px;
+
+    overflow: hidden;
+
+    border: 2px solid rgba(123, 167, 175, 0.75);
+    border-radius: 50%;
+
+    background-color: #0b0f0f;
+
+    box-shadow:
+        0 0 0 5px rgba(0, 0, 0, 0.28),
+        0 0 12px rgba(123, 167, 175, 0.15);
+}
+
+.cd-disc img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   Center Display
+========================= */
+
+.stereo-display {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 24px 28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.008),
+            rgba(0, 0, 0, 0.08)
+        );
+}
+
+.stereo-display-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
+/* Track Number */
+
+.now-spinning-number {
+    margin: 0;
+
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.62rem;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* Playing Status */
+
+.now-spinning-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.58rem;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.now-spinning-dot {
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    background-color: var(--color-accent);
+    border-radius: 50%;
+}
+
+
+/* =========================
+   Track Information
+========================= */
+
+.now-spinning-track h2 {
+    margin: 0;
+
+    color: var(--color-text-primary);
+
+    font-family: "DM Mono", monospace;
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    font-weight: 600;
+
+    line-height: 1.05;
+}
+
+.now-spinning-artist {
+    margin: 0.5rem 0 0;
+
+    color: var(--color-text-primary);
+
+    font-size: 0.8rem;
+}
+
+.now-spinning-genre {
+    margin: 0.35rem 0 0;
+
+    color: var(--color-accent);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.6rem;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   Progress
+========================= */
+
+.now-spinning-progress {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 22px;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.58rem;
+}
+
+.now-spinning-progress-track {
+    height: 3px;
+
+    overflow: hidden;
+
+    background-color: #2c3434;
+    border-radius: 999px;
+}
+
+.now-spinning-progress-fill {
+    width: 0%;
+    height: 100%;
+
+    background-color: var(--color-accent);
+    border-radius: inherit;
+}
+
+
+/* =========================
+   Bottom Labels
+========================= */
+
+.now-spinning-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 16px;
+    padding-top: 10px;
+
+    color: var(--color-text-secondary);
+
+    border-top: 1px solid #303737;
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.55rem;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   Right Meter Panel
+========================= */
+
+.stereo-meter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-left: 1px solid rgba(0, 0, 0, 0.35);
+
+    background:
+        linear-gradient(
+            180deg,
+            #151b1b,
+            #101515
+        );
+}
+
+.meter-bars {
+    height: 105px;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.meter-column {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.meter-column span {
+    width: 13px;
+    height: 5px;
+
+    border:
+        1px solid rgba(123, 167, 175, 0.15);
+
+    background-color: #263131;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.meter-labels {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 10px;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.75rem;
+}
+
+
+/* =========================
+   Temporary CD Center
+========================= */
+
+.cd-center {
+    position: absolute;
+    inset: 50% auto auto 50%;
+
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(10, 14, 14, 0.9);
+
+    border: 4px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 0, 0, 0.7);
+}
+
+.cd-center-hole {
+    width: 19px;
+    height: 19px;
+
+    background-color: #090c0c;
+
+    border: 1px solid #343d3d;
+    border-radius: 50%;
+}
+
+/* =========================
+   Speaker Holes
+========================= */
+
+.stereo-speaker {
+    display: grid;
+    place-items: center;
+}
+
+.speaker-holes {
+    width: 24px;
+    height: 150px;
+
+    opacity: 0.55;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(0, 0, 0, 0.95) 0 2px,
+            transparent 2.5px
+        );
+
+    background-size: 8px 8px;
+}
+
+
+/* =========================
+   CD Chamber Depth
+========================= */
+
+.cd-chamber {
+    box-shadow:
+        inset 0 0 22px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.cd-disc {
+    box-shadow:
+        0 0 0 4px #0a0f0f,
+        0 0 0 6px #2c3838,
+        0 0 14px rgba(123, 167, 175, 0.28),
+        0 8px 18px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================
+   CD Shine
+========================= */
+
+.cd-shine {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.12),
+            transparent 26%,
+            transparent 68%,
+            rgba(123, 167, 175, 0.08)
+        );
+
+    mix-blend-mode: screen;
+}
+
+
+/* =========================
+   Stereo Screws
+========================= */
+
+.stereo-screw {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    z-index: 3;
+
+    background:
+        radial-gradient(
+            circle at 35% 35%,
+            #657070,
+            #1c2323 45%,
+            #080b0b 70%
+        );
+
+    border: 1px solid #080b0b;
+    border-radius: 50%;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.15),
+        0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.stereo-screw::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 5px;
+    height: 1px;
+
+    background-color: #090c0c;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-35deg);
+}
+
+.screw-top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.screw-top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.screw-bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.screw-bottom-right {
+    right: 10px;
+    bottom: 10px;
+}
+
+
+/* =========================
+   Hardware Texture
+========================= */
+
+.now-spinning::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.08;
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.08) 0,
+            rgba(255, 255, 255, 0.08) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+}
+
+/* =========================
+   CD Tray Ring
+========================= */
+
+.cd-chamber::before {
+    content: "";
+
+    position: absolute;
+    width: 204px;
+    height: 204px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(123, 167, 175, 0.22);
+
+    box-shadow:
+        inset 0 0 18px rgba(0, 0, 0, 0.75),
+        0 0 0 2px rgba(255, 255, 255, 0.015);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CD Outer Rings
+========================= */
+
+.cd-disc::before {
+    content: "";
+
+    position: absolute;
+    inset: 10px;
+
+    z-index: 2;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.cd-disc::after {
+    content: "";
+
+    position: absolute;
+    inset: 22px;
+
+    z-index: 2;
+
+    border: 1px solid rgba(123, 167, 175, 0.1);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CD Center Upgrade
+========================= */
+
+.cd-center {
+    z-index: 4;
+
+    width: 52px;
+    height: 52px;
+
+    background:
+        radial-gradient(
+            circle,
+            #0a0e0e 0 28%,
+            #293131 29% 40%,
+            #111717 41% 62%,
+            #050808 63%
+        );
+
+    border: 1px solid #374242;
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.08),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.85),
+        0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.cd-center-hole {
+    width: 17px;
+    height: 17px;
+
+    background:
+        radial-gradient(
+            circle,
+            #020404,
+            #0d1212
+        );
+
+    border: 1px solid #394444;
+
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================
+   CD Glass Highlight
+========================= */
+
+.cd-shine {
+    z-index: 3;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.04) 18%,
+            transparent 35%,
+            transparent 66%,
+            rgba(123, 167, 175, 0.07) 82%,
+            rgba(255, 255, 255, 0.03) 100%
+        );
+}
+
+
+/* =========================
+   Panel Seams
+========================= */
+
+.cd-chamber::after {
+    content: "";
+
+    position: absolute;
+    inset: 7px;
+
+    border: 1px solid rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+}
+
+.stereo-display {
+    box-shadow:
+        inset 1px 0 0 rgba(255, 255, 255, 0.018),
+        inset -1px 0 0 rgba(0, 0, 0, 0.45);
+}
+
+.stereo-meter {
+    box-shadow:
+        inset 1px 0 0 rgba(255, 255, 255, 0.018);
+}
+
+/* =========================
+   Spinning CD
+========================= */
+
+@keyframes spin-cd {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cd-disc {
+    animation:
+        spin-cd 8s linear infinite;
+
+    animation-play-state: paused;
+}
+
+.now-spinning.is-playing .cd-disc {
+    animation-play-state: running;
+}
+
+
+/* Keep shine stationary */
+
+.cd-shine {
+    animation: none;
+}
+
+
+/* =========================
+   Playing Status
+========================= */
+
+.now-spinning.is-playing
+.now-spinning-dot {
+    box-shadow:
+        0 0 6px var(--color-accent),
+        0 0 12px rgba(123, 167, 175, 0.4);
+}
+
+
+/* =========================
+   Meter Animation
+========================= */
+
+@keyframes meter-pulse {
+    0%,
+    100% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow:
+            0 0 5px rgba(123, 167, 175, 0.35);
+    }
+}
+
+.now-spinning.is-playing
+.meter-column span {
+    background-color: var(--color-accent);
+
+    animation:
+        meter-pulse 0.8s ease-in-out infinite;
+}
+
+
+/* Different timing makes it feel less robotic */
+
+.now-spinning.is-playing
+.meter-column span:nth-child(2n) {
+    animation-delay: 0.15s;
+}
+
+.now-spinning.is-playing
+.meter-column span:nth-child(3n) {
+    animation-delay: 0.3s;
+}
+
+.now-spinning.is-playing
+.meter-right span {
+    animation-delay: 0.22s;
+}
+
+/* =========================
+   Stereo Outer Edge
+========================= */
+
+.now-spinning {
+    border-color: #384242;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.045),
+        inset 0 -2px 3px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(0, 0, 0, 0.45),
+        0 10px 26px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================
+   CD Chamber Inner Plate
+========================= */
+
+.cd-chamber {
+    background:
+        radial-gradient(
+            circle at center,
+            #192020 0%,
+            #121818 55%,
+            #0c1111 100%
+        );
+
+    box-shadow:
+        inset 0 0 28px rgba(0, 0, 0, 0.75),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+
+/* =========================
+   CD Tray Groove
+========================= */
+
+.cd-chamber::before {
+    width: 208px;
+    height: 208px;
+
+    border:
+        1px solid rgba(123, 167, 175, 0.18);
+
+    box-shadow:
+        inset 0 0 16px rgba(0, 0, 0, 0.9),
+        0 0 0 3px rgba(0, 0, 0, 0.2),
+        0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+
+/* =========================
+   Display Recess
+========================= */
+
+.stereo-display {
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #131919 0%,
+            #101616 100%
+        );
+
+    box-shadow:
+        inset 8px 0 14px rgba(0, 0, 0, 0.12),
+        inset -8px 0 14px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Little screen frame */
+
+.stereo-display::before {
+    content: "";
+
+    position: absolute;
+    inset: 10px;
+
+    pointer-events: none;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.025);
+}
+
+
+/* =========================
+   Track Display Glow
+========================= */
+
+.now-spinning-track h2 {
+    text-shadow:
+        0 0 12px rgba(226, 228, 210, 0.06);
+}
+
+.now-spinning-genre,
+.now-spinning-number {
+    text-shadow:
+        0 0 7px rgba(123, 167, 175, 0.18);
+}
+
+
+/* =========================
+   Progress Hardware Track
+========================= */
+
+.now-spinning-progress-track {
+    height: 4px;
+
+    background-color: #080c0c;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.035);
+
+    box-shadow:
+        inset 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.now-spinning-progress-fill {
+    box-shadow:
+        0 0 5px rgba(123, 167, 175, 0.35);
+}
+
+
+/* =========================
+   Meter Housing
+========================= */
+
+.stereo-meter {
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            #101616,
+            #151b1b 50%,
+            #101616
+        );
+
+    box-shadow:
+        inset 5px 0 10px rgba(0, 0, 0, 0.2),
+        inset -5px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Meter inner frame */
+
+.stereo-meter::before {
+    content: "";
+
+    position: absolute;
+
+    top: 24px;
+    right: 16px;
+    bottom: 24px;
+    left: 16px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.035);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   Meter Blocks
+========================= */
+
+.meter-column span {
+    width: 10px;
+    height: 4px;
+
+    border:
+        1px solid rgba(123, 167, 175, 0.15);
+
+    background-color: #263131;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.now-spinning.is-playing
+.meter-column span {
+    box-shadow:
+        0 0 5px rgba(123, 167, 175, 0.35),
+        inset 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================
+   Speaker Depth
+========================= */
+
+.stereo-speaker {
+    background:
+        linear-gradient(
+            90deg,
+            #0c1111,
+            #151b1b,
+            #101616
+        );
+
+    box-shadow:
+        inset -5px 0 8px rgba(0, 0, 0, 0.35);
+}
+
+.speaker-holes {
+    opacity: 0.7;
+
+    filter:
+        drop-shadow(
+            1px 1px 0 rgba(255, 255, 255, 0.025)
+        );
+}
+
+
+/* =========================
+   Tiny REWIND Branding
+========================= */
+
+.now-spinning-footer span:first-child {
+    color: var(--color-accent);
+
+    font-weight: 600;
+
+    text-shadow:
+        0 0 6px rgba(123, 167, 175, 0.18);
+}
+/* =========================
+   Recently Rewound Rows
+========================= */
+
+#recently-rewound-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(340px, 1fr));
+
+    gap: 0.75rem 1.25rem;
+
+    width: 100%;
+}
+
+.recent-track-row {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    align-items: center;
+    gap: var(--space-sm);
+
+    padding: 0.65rem;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.recent-track-row:hover {
+    background-color: var(--color-hover);
+    border-color: var(--color-accent);
+
+    transform: translateY(-2px);
+}
+
+
+/* Cover */
+
+.recent-track-cover {
+    position: relative;
+
+    width: 64px;
+    height: 64px;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-sm);
+}
+
+.recent-track-cover img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+}
+
+.recent-track-cover .song-play-button {
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--color-text-primary);
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border: none;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+    transition: opacity var(--transition-fast);
+}
+
+.recent-track-row:hover
+.recent-track-cover
+.song-play-button {
+    opacity: 1;
+}
+
+
+/* Info */
+
+.recent-track-info {
+    min-width: 0;
+}
+
+.recent-track-info h3 {
+    margin: 0;
+
+    color: var(--color-text-primary);
+
+    font-size: 0.85rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recent-track-info p {
+    margin: 0.25rem 0 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.72rem;
+}
+
+
+/* Right Side */
+
+.recent-track-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 0.8rem;
+
+    flex-shrink: 0;
+
+    margin-left: auto;
+}
+.recent-track-duration {
+    min-width: 36px;
+
+    color: var(--color-text-secondary);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.68rem;
+
+    text-align: right;
+}
+
+.recent-track-play {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    padding-left: 2px;
+
+    color: var(--color-charcoal);
+
+    background-color: var(--color-accent);
+
+    border: 0;
+    border-radius: 50%;
+
+    font-size: 0.75rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.recent-track-play:hover {
+    transform: scale(1.07);
+}
+
+.recent-track-actions .recent-track-play {
+    position: static;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    opacity: 1;
+
+    transform: none;
+}
+
+.recent-track-actions .recent-track-play:hover {
+    transform: scale(1.07);
+}
