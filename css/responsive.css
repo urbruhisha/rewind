@@ -1,20 +1,4 @@
 @charset "UTF-8";
-/* CSS Document */
-
-/*	A CSS rule has the following syntax:
-		selector { property: style; property: style; property: style; }
-	
-	For a list of CSS properties, see the w3Schools website @ http://www.w3schools.com/css/css_reference.asp */
-
-/* https://www.w3schools.com/html/html5_semantic_elements.asp */
-/* https://www.w3schools.com/css/css_rwd_images.asp */
-
-/*	Aisha Fermin
-	==================================================
-	Table of Contents
-	==================================================
-		:: Typography
-
 
 /*	Typography
 	================================================== */
@@ -334,4 +318,305 @@ a.myresume {
 .contact-button:hover {
     background: #52796c;
     transform: translateY(-3px);
+}
+
+
+
+/* ==========================================
+   REWIND — RESPONSIVE
+   STEP 1: APP LAYOUT + SIDEBAR
+========================================== */
+
+
+/* ==========================================
+   TABLET — 1024px and below
+========================================== */
+
+@media (max-width: 1024px) {
+
+    .sidebar {
+        width: 88px;
+        flex-shrink: 0;
+        padding: 1.5rem 0.65rem;
+    }
+
+    .sidebar-brand {
+        display: flex;
+        justify-content: center;
+    }
+
+    .brand-text,
+    .nav-label,
+    .sidebar-footer {
+        display: none;
+    }
+
+    .brand-link {
+        justify-content: center;
+    }
+
+    .nav-item {
+        justify-content: center;
+        padding: 0.75rem 0.4rem;
+    }
+
+    .nav-item > span:not(.nav-icon) {
+        display: none;
+    }
+
+    .nav-icon {
+        width: auto;
+        font-size: 1.3rem;
+    }
+
+    .main-content {
+        min-width: 0;
+        padding: 1.5rem;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE — 700px and below
+========================================== */
+
+@media (max-width: 700px) {
+
+    .app {
+        flex-direction: column;
+        height: calc(100dvh - var(--player-height));
+        min-height: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+
+        flex-direction: row;
+        align-items: center;
+
+        padding: 0.65rem 0.75rem;
+
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .sidebar-brand {
+        margin: 0 0.65rem 0 0;
+    }
+
+    .brand-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .sidebar-nav {
+        flex: 1;
+        min-width: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .sidebar-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0.25rem;
+    }
+
+    .nav-list li {
+        flex-shrink: 0;
+    }
+
+    .nav-item {
+        width: 42px;
+        height: 42px;
+        padding: 0.5rem;
+    }
+
+    .main-content {
+        flex: 1;
+        min-height: 0;
+        width: 100%;
+
+        padding: 1.25rem 1rem;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+}
+
+
+/* ==========================================
+   FAVORITES — HIDE VINYL ON TABLET & MOBILE
+========================================== */
+
+@media (max-width: 1024px) {
+
+    #favorites-page .favorites-vinyl-area {
+        display: none;
+    }
+
+    #favorites-page .favorites-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #favorites-page .favorites-left,
+    #favorites-page .favorites-right {
+        width: 100%;
+        min-width: 0;
+    }
+
+}
+
+
+/* ==========================================
+   MIXTAPES — TABLET + MOBILE
+========================================== */
+
+@media (max-width: 1024px) {
+
+    /* Flexible mixtape grid */
+
+    #mixtapes-page .mixtape-grid {
+        grid-template-columns:
+            repeat(auto-fill, minmax(120px, 150px));
+        gap: 1rem;
+    }
+
+    #mixtapes-page .mixtape-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Square cassette artwork */
+
+    #mixtapes-page .mixtape-card .cassette {
+        aspect-ratio: 1 / 1;
+        padding: 0.7rem;
+        border-radius: 8px;
+    }
+
+    #mixtapes-page .mixtape-card .cassette-top {
+        margin: 0 0 0.65rem;
+        font-size: 0.5rem;
+    }
+
+    #mixtapes-page .mixtape-card .cassette-side {
+        width: 18px;
+        height: 18px;
+        margin-left: 0;
+    }
+
+    #mixtapes-page .mixtape-card .cassette-label {
+        padding: 0.4rem;
+        border-radius: 3px;
+    }
+
+    #mixtapes-page .mixtape-card .cassette-title {
+        font-size: 0.58rem;
+    }
+
+    #mixtapes-page .mixtape-card .cassette-window {
+        height: 34px;
+        margin-top: 0.5rem;
+        padding: 0 0.4rem;
+        border: 2px solid var(--color-cream);
+        border-radius: 4px;
+    }
+
+    #mixtapes-page .mixtape-card .cassette-reel {
+        width: 20px;
+        height: 20px;
+    }
+
+    #mixtapes-page .mixtape-card .cassette-reel::before {
+        inset: 4px;
+    }
+
+    /* Mood tiles: number + color only */
+
+    #mixtapes-page .mood-grid {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+    #mixtapes-page .mood-card {
+        min-width: 0;
+        min-height: 62px;
+        padding: 0.65rem 0.45rem;
+        align-items: center;
+    }
+
+    #mixtapes-page .mood-card-name {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+
+    #mixtapes-page .mood-card-number {
+        font-size: 0.68rem;
+        color: var(--mood-color);
+    }
+
+    #mixtapes-page .mood-card-line {
+        left: 20%;
+        right: 20%;
+        bottom: 0.7rem;
+        height: 5px;
+        border-radius: 10px;
+        opacity: 1;
+    }
+
+}
+
+
+/* ==========================================
+   MIXTAPES — MOBILE ONLY
+========================================== */
+
+@media (max-width: 700px) {
+
+    #mixtapes-page .page-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    #mixtapes-page .page-header h1 {
+        font-size: clamp(1.7rem, 8vw, 2.4rem);
+    }
+
+    #mixtapes-page .page-header > div > p:last-child {
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    #mixtapes-page .create-mixtape-button {
+        margin-top: 0.4rem;
+        align-self: flex-start;
+    }
+
+    #mixtapes-page .mixtape-grid {
+        grid-template-columns:
+            repeat(auto-fill, minmax(110px, 1fr));
+        gap: 0.85rem;
+    }
+
+    #mixtapes-page .mood-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
 }
